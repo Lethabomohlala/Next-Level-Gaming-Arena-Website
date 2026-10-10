@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Booking | Next Level</title>
+</head>
+<body>
+    <header>
+        <a href="home.html">
+            <img src="images/logo.png" alt="Next Level Logo" width="200" height="200">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="offers.html">OFFERS</a></li>
+                <li><a href="booking.html">BOOKING</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div>
+                <h1>✶ SELECT YOUR THRILL ✶</h1>
+                <p>Choose one or more experiences to build your ultimate gaming session. Adjust quantities or add multiple packages to your booking before confirming your details.</p>
+
+                <!-- Selectable package list -->
+                <div>
+                    <div>
+                        <input type="checkbox" id="pkg-ultimate" name="selected_packages" value="ultimate">
+                        <label for="pkg-ultimate">
+                            <h3>ULTIMATE GAMER PASS</h3>
+                            <p>R 1500</p>
+                        </label>
+                        <div>
+                            <button type="button">-</button>
+                            <span>1</span>
+                            <button type="button">+</button>
+                            <button type="button">&#128465;</button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" id="pkg-esports" name="selected_packages" value="esports">
+                        <label for="pkg-esports">
+                            <h3>ESPORTS TRAINING</h3>
+                            <p>R 1500</p>
+                        </label>
+                        <div>
+                            <button type="button">-</button>
+                            <span>1</span>
+                            <button type="button">+</button>
+                            <button type="button">&#128465;</button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" id="pkg-virtual" name="selected_packages" value="virtual">
+                        <label for="pkg-virtual">
+                            <h3>VIRTUAL REALITY EXPERIENCE</h3>
+                            <p>R 750</p>
+                        </label>
+                        <div>
+                            <button type="button">-</button>
+                            <span>1</span>
+                            <button type="button">+</button>
+                            <button type="button">&#128465;</button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" id="pkg-escape" name="selected_packages" value="escape">
+                        <label for="pkg-escape">
+                            <h3>ESCAPE ROOM CHALLENGE</h3>
+                            <p>R 750</p>
+                        </label>
+                        <div>
+                            <button type="button">-</button>
+                            <span>1</span>
+                            <button type="button">+</button>
+                            <button type="button">&#128465;</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <form>
+                    <h2>CLIENT DETAILS</h2>
+
+                    <label for="name">Name & Surname *</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="Johndoe@example.com" required>
+
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" placeholder="081-992-4545" required>
+
+                    <label for="guests">Number Of Guests *</label>
+                    <div>
+                        <button type="button">-</button>
+                        <input type="number" id="guests" name="guests" value="3" min="1" required>
+                        <button type="button">+</button>
+                    </div>
+
+                    <button type="submit">CONFIRM DETAILS</button>
+
+                    <h2>CONFIRM SELECTION</h2>
+                    <div>
+                        <input type="checkbox" id="select-ultimate" name="package_selection" value="ultimate">
+                        <label for="select-ultimate">ULTIMATE GAMER PASS</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="select-esports" name="package_selection" value="esports">
+                        <label for="select-esports">ESPORTS TRAINING</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="select-virtual" name="package_selection" value="virtual">
+                        <label for="select-virtual">VIRTUAL REALITY EXPERIENCE</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="select-escape" name="package_selection" value="escape">
+                        <label for="select-escape">ESCAPE ROOM CHALLENGE</label>
+                    </div>
+
+                    <button type="button">PROCEED TO CALCULATOR</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <p>CONNECT. PLAY</p>
+            <ul>
+                <li><a href="#discord">Discord</a></li>
+                <li><a href="#instagram">Instagram</a></li>
+                <li><a href="#twitter">Twitter</a></li>
+                <li><a href="#tiktok">TikTok</a></li>
+            </ul>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="offers.html">OFFERS</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <p>&copy;2023 NEXT LEVEL GAMING ARENA. ALL RIGHTS RESERVED.</p>
+    </footer>
+</body>
+</html>

@@ -98,21 +98,7 @@ The Next Level Gaming Arena website connects gamers directly with our physical v
 
 **D. Project File Structure & Navigation**
 
-next-level-web/
-├── images/           # Brand logos, icons, high-res banners, and wireframes
-├── home.html         # Landing page / Hero showcase & brand introduction
-├── about.html        # Brand story, mission, vision, and hardware specs
-├── offers.html       # Experience package showcase with internal anchor links
-├── ultimate.html     # Dedicated experience page: Ultimate Gamer Pass
-├── esports.html      # Dedicated experience page: Esports Training
-├── virtual.html      # Dedicated experience page: Virtual Reality Experience
-├── escape.html       # Dedicated experience page: Escape Room Challenge
-├── booking.html      # Interactive experience selector and client details form
-├── fees.html         # Cost breakdown, tiered discount, and VAT calculation layout
-├── confirm.html      # Booking confirmation page with summary details
-├── faq.html          # Interactive accordion FAQ page
-├── contact.html      # Venue location details, contact form, and Google Maps embed
-└── README.md         # Project documentation
+![Structure for Next Level](/images/structure.png)
 
 **E. Making Changes and Pushing Updates:**
 To update code or content via VS Code Terminal:

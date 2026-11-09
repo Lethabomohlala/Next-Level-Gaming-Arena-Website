@@ -83,54 +83,25 @@
                             <button type="button">+</button>
                             <button type="button">&#128465;</button>
                         </div>
+                        <div>
+                        <input type="checkbox" id="pkg-escape" name="selected_packages" value="escape">
+                        <label for="pkg-escape">
                     </div>
                 </div>
             </div>
-
+            <button type="button" onclick="updateTotal(); document.getElementById('calculatorPopup').style.display='block'">DONE - SEE MY TOTAL</button>
+           
+            <div id="calculatorPopup" style="display: none;">
+                <h2>YOUR TOTAL</h2>
+                <p id="totalText">You have not selected anything yet.</p>
+                <p id="totalPrice">Total: R 0</p>
+                <Button type="button" onclick="closeCalculator()">CLOSE</Button>
+                <a href="<button onclick="window.open('https://forms.gle/HHoMLsVR2mjydPNe9', '_blank')">CONTINUE TO BOOK</button></a>
+            </div>
             <div>
-                <form>
-                    <h2>CLIENT DETAILS</h2>
-
-                    <label for="name">Name & Surname *</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe" required>
-
-                    <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email" placeholder="Johndoe@example.com" required>
-
-                    <label for="phone">Phone Number *</label>
-                    <input type="tel" id="phone" name="phone" placeholder="081-992-4545" required>
-
-                    <label for="guests">Number Of Guests *</label>
-                    <div>
-                        <button type="button">-</button>
-                        <input type="number" id="guests" name="guests" value="0" min="1" required>
-                        <button type="button">+</button>
-                    </div>
-
-                    <button type="submit">CONFIRM DETAILS</button>
-
-                    <h2>CONFIRM SELECTION</h2>
-                    <div>
-                        <input type="checkbox" id="select-ultimate" name="package_selection" value="ultimate">
-                        <label for="select-ultimate">ULTIMATE GAMER PASS</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="select-esports" name="package_selection" value="esports">
-                        <label for="select-esports">ESPORTS TRAINING</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="select-virtual" name="package_selection" value="virtual">
-                        <label for="select-virtual">VIRTUAL REALITY EXPERIENCE</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="select-escape" name="package_selection" value="escape">
-                        <label for="select-escape">ESCAPE ROOM CHALLENGE</label>
-                    </div>
-
-                    <a href="fees.html">
-                        <button type="button">PROCEED TO CALCULATOR</button>
-                    </a>
-                </form>
+               <h2>READY TO BOOK</h2>
+               <p>Click below to fill your booking form</p>
+               <a href="<button onclick="window.open('https://forms.gle/HHoMLsVR2mjydPNe9', '_blank')">CONTINUE TO BOOK</button></a>
             </div>
         </section>
     </main>
@@ -157,5 +128,42 @@
 
         <p>&copy;2023 NEXT LEVEL GAMING ARENA. ALL RIGHTS RESERVED.</p>
     </footer>
+    <script>
+        function updateTotal() {
+            const packages = [
+                { id: 'pkg-ultimate', price: 1500 },
+                { id: 'pkg-esports', price: 1500 },
+                { id: 'pkg-virtual', price: 750 },
+                { id: 'pkg-escape', price: 750 }
+            ];
+
+            let total = 0;
+            let selectedPackages = [];
+
+            packages.forEach(pkg => {
+                const checkbox = document.getElementById(pkg.id);
+                if (checkbox.checked) {
+                    total += pkg.price;
+                    selectedPackages.push(checkbox.nextElementSibling.querySelector('h3').textContent);
+                }
+            });
+
+            const totalText = document.getElementById('totalText');
+            const totalPrice = document.getElementById('totalPrice');
+
+            if (selectedPackages.length > 0) {
+                totalText.textContent = `You have selected: ${selectedPackages.join(', ')}`;
+                totalPrice.textContent = `Total: R ${total}`;
+            } else {
+                totalText.textContent = "You have not selected anything yet.";
+                totalPrice.textContent = "Total: R 0";
+            }
+        }
+
+        function closeCalculator() {
+            document.getElementById('calculatorPopup').style.display = 'none';
+        }
+    </script>
+
 </body>
 </html>

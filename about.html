@@ -4,236 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Next Level Gaming Arena</title>
-    <style>
-        /* --- CSS Reset & Variables --- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --bg-color: #000000; /* Pure Black Background */
-            --card-bg: #131b2e;
-            --accent-red: #ff3366;
-            --accent-purple: #8b5cf6;
-            --accent-orange: #ff7f00; /* Orange Footer Banner */
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --border-color: #1e293b;
-            --transition: all 0.3s ease;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        /* --- Header & Navigation --- */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 5%;
-            background-color: rgba(0, 0, 0, 0.95);
-            border-bottom: 1px solid var(--border-color);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            backdrop-filter: blur(10px);
-        }
-
-        header img {
-            height: 60px;
-            width: auto;
-            object-fit: contain;
-            /* Turns the logo white */
-            filter: brightness(0) invert(1);
-        }
-
-        nav ul {
-            display: flex;
-            gap: 2rem;
-        }
-
-        nav ul li a {
-            font-weight: 600;
-            font-size: 0.95rem;
-            letter-spacing: 1px;
-            color: var(--text-muted);
-            transition: var(--transition);
-        }
-
-        nav ul li a:hover,
-        nav ul li a.active {
-            color: var(--accent-red);
-            text-shadow: 0 0 10px rgba(255, 51, 102, 0.4);
-        }
-
-        /* --- Main Content --- */
-        main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 4rem 1.5rem;
-            display: flex;
-            flex-direction: column;
-            gap: 5rem;
-        }
-
-        /* About Sections */
-        .about-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .about-image img {
-            width: 100%;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
-            object-fit: cover;
-            max-height: 400px;
-        }
-
-        .about-content h1, 
-        .about-content h2 {
-            font-size: 2.2rem;
-            font-weight: 900;
-            color: var(--text-main);
-            margin-bottom: 1.5rem;
-            letter-spacing: 1px;
-            background: linear-gradient(135deg, #fff 30%, var(--accent-red));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .about-content h2 {
-            font-size: 2rem;
-        }
-
-        .about-content p {
-            color: var(--text-muted);
-            margin-bottom: 1.2rem;
-            font-size: 1.05rem;
-        }
-
-        .about-content p strong {
-            color: var(--text-main);
-        }
-
-        .tagline {
-            color: var(--accent-purple);
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            font-size: 0.95rem;
-            margin-top: 1.5rem;
-        }
-
-        /* --- Footer (Orange Banner) --- */
-        footer {
-            background-color: var(--accent-orange);
-            color: #0b0f19;
-            border-top: 1px solid var(--border-color);
-            padding: 4rem 5% 2rem 5%;
-            margin-top: 5rem;
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-            text-align: center;
-        }
-
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            width: 100%;
-        }
-
-        .footer-social p {
-            font-weight: 700;
-            margin-bottom: 0.75rem;
-            letter-spacing: 1px;
-            color: #0b0f19;
-        }
-
-        .footer-social ul,
-        .footer-nav ul {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-        }
-
-        .footer-social ul li a,
-        .footer-nav ul li a {
-            color: #1e1b4b;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: var(--transition);
-        }
-
-        .footer-social ul li a:hover,
-        .footer-nav ul li a:hover {
-            color: #ffffff;
-        }
-
-        footer > p {
-            color: #1e1b4b;
-            font-weight: 600;
-            font-size: 0.85rem;
-            border-top: 1px solid rgba(0, 0, 0, 0.2);
-            padding-top: 1.5rem;
-            margin-top: 1rem;
-        }
-
-        /* --- Responsive Design --- */
-        @media (max-width: 768px) {
-            .about-section {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            header {
-                flex-direction: column;
-                gap: 1rem;
-                padding: 1rem;
-            }
-            nav ul {
-                gap: 1rem;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            .footer-content {
-                flex-direction: column;
-                text-align: center;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-    <!-- Header & Navigation[cite: 2] -->
     <header>
-        <a href="home.html">
-            <img src="images/logo.png" alt="Next Level Logo">
-        </a>
+        <a href="home.html"><img src="images/logo.png" alt="Next Level Logo"></a>
         <nav>
             <ul>
                 <li><a href="home.html">HOME</a></li>
@@ -246,45 +21,67 @@
         </nav>
     </header>
 
-    <!-- Main Content Area -->
-    <main>
-        <!-- Section 1: About Us Story -->
-        <section class="about-section">
-            <div class="about-content">
-                <h1>* ABOUT US *</h1>
-                <p>Founded in 2023 in the heart of Johannesburg, <strong>Next Level Gaming & Esports Arena</strong> was built by Jason Naidoo, an avid gamer who saw a major gap in the local gaming scene. While South Africa's passion for Esports and gaming was rapidly growing, access to high-performance equipment, specialized arena setups, and organized competitive events remained limited. Driven to solve this, Jason set out to build a modern venue that bridges the gap, offering a space where players of all skill levels can access top-tier gear, join competitive tournaments, and share their passion with a vibrant community.</p>
-                <p class="tagline">BUILT BY GAMERS. MADE FOR EVERYONE.</p>
+    <main class="about-main">
+        <!-- Top Split Section: Story & Arena Image -->
+        <section class="about-hero-grid">
+            <div class="about-story-col">
+                <h1 class="about-title">ABOUT US</h1>
+                <div class="about-text">
+                    <p>
+                        Founded in 2023 in the heart of Johannesburg, <strong>Next Level Gaming & Esports Arena</strong> was built by Jason Naidoo, an avid gamer who saw a major gap in the local gaming scene. While South Africa's passion for Esports and gaming was rapidly growing, access to high-performance equipment, specialized arena setups, and organized competitive events remained limited. Driven to solve this, Jason set out to build a modern venue that bridges the gap, offering a space where players of all skill levels can access top-tier gear, join competitive tournaments, and share their passion with a vibrant community.
+                    </p>
+                </div>
+
+                <!-- Circular Badge -->
+                <div class="circular-badge">
+                    <svg viewBox="0 0 100 100" width="130" height="130">
+                        <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none" />
+                        <text fill="#ffffff" font-size="10" font-weight="500" letter-spacing="1.5">
+                            <textPath href="#circlePath" startOffset="0%">
+                                BUILT BY GAMERS &#9733; MADE FOR EVERYONE &#9733;
+                            </textPath>
+                        </text>
+                    </svg>
+                </div>
             </div>
-            <div class="about-image">
-                <img src="images/about.png" alt="A person wearing headphones focused on gaming in an arena setting">
+
+            <div class="about-image-col">
+                <img src="images/about.png" alt="Next Level Gaming Arena Exterior">
             </div>
         </section>
 
-        <!-- Section 2: Our Mission -->
-        <section class="about-section">
-            <div class="about-image">
-                <img src="images/about2.png" alt="Group of gamers playing in a competitive arena setup">
+        <!-- Bottom Grid: Mission & Vision Cards -->
+        <section class="mission-vision-grid">
+            <div class="info-card">
+                <h2>OUR MISSION</h2>
+                <p>
+                    We are dedicated to driving the expansion of South Africa's Esports and gaming ecosystem. By combining modern hardware, inclusive community spaces, and competitive events, Next Level provides an accessible platform where casual players can socialise and aspiring pro-gamers can hone their skills.
+                </p>
             </div>
-            <div class="about-content">
-                <h2>* OUR MISSION *</h2>
-                <p>We are dedicated to driving the expansion of South Africa's Esports and gaming ecosystem. By combining modern hardware, inclusive community spaces, and competitive events, Next Level provides an accessible platform where casual players can socialise and aspiring pro-gamers can hone their skills.</p>
+
+            <div class="info-card">
+                <h2>OUR VISION</h2>
+                <p>
+                    To be Africa's premier gaming and Esports destination, cultivating an inclusive community where every player, from casual gamer to rising pro, can unlock their ultimate potential. Empowering every gamer to play, connect, and compete at the next level in a vibrant, inclusive community.
+                </p>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <div class="footer-social">
-                <p>CONNECT. PLAY</p>
-                <ul>
-                    <li><a href="#discord">Discord</a></li>
-                    <li><a href="#instagram">Instagram</a></li>
-                    <li><a href="#twitter">Twitter</a></li>
-                    <li><a href="#tiktok">TikTok</a></li>
-                </ul>
+            <div class="footer-brand-social">
+                <a href="home.html"><img src="images/logo.png" alt="Next Level Logo" class="footer-logo"></a>
+                <div class="footer-social">
+                    <p>CONNECT. PLAY</p>
+                    <ul>
+                        <li><a href="#discord">DISCORD</a></li>
+                        <li><a href="#instagram">INSTAGRAM</a></li>
+                        <li><a href="#twitter">TWITTER</a></li>
+                        <li><a href="#tiktok">TIKTOK</a></li>
+                    </ul>
+                </div>
             </div>
-
             <nav class="footer-nav">
                 <ul>
                     <li><a href="about.html">ABOUT US</a></li>
@@ -294,9 +91,9 @@
                 </ul>
             </nav>
         </div>
-
-        <p>&copy;2026 NEXT LEVEL GAMING ARENA. ALL RIGHTS RESERVED.</p>
+        <p>&copy;2023 NEXT LEVEL GAMING ARENA. ALL RIGHTS RESERVED.</p>
     </footer>
 
+    <script src="js/script.js"></script>
 </body>
 </html>

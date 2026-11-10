@@ -4,87 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking Confirmed | Next Level Gaming Arena</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root {
-            --bg-color: #000000;
-            --card-bg: #0d111a;
-            --accent-red: #ff3366;
-            --accent-purple: #8b5cf6;
-            --accent-orange: #ff7f00;
-            --accent-green: #22c55e;
-            --text-main: #ffffff;
-            --text-muted: #94a3b8;
-            --border-color: #1e293b;
-            --transition: all 0.3s ease;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        a { text-decoration: none; color: inherit; }
-        ul { list-style: none; }
-
-        header {
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 1rem 5%; background-color: rgba(0, 0, 0, 0.95);
-            border-bottom: 1px solid var(--border-color); position: sticky; top: 0; z-index: 1000;
-        }
-        header img { height: 60px; width: auto; object-fit: contain; filter: brightness(0) invert(1); }
-        nav ul { display: flex; gap: 2rem; }
-        nav ul li a { font-weight: 600; font-size: 0.95rem; letter-spacing: 1px; color: var(--text-muted); transition: var(--transition); }
-        nav ul li a:hover { color: var(--accent-red); }
-
-        main { max-width: 800px; margin: 0 auto; padding: 4rem 1.5rem; width: 100%; }
-        .confirmation-card {
-            background-color: var(--card-bg); border: 1px solid var(--border-color);
-            border-radius: 16px; padding: 3rem 2.5rem; text-align: center;
-            box-shadow: 0 0 40px rgba(34, 197, 94, 0.08);
-        }
-        .success-icon {
-            width: 70px; height: 70px; background-color: rgba(34, 197, 94, 0.15);
-            color: var(--accent-green); border-radius: 50%; display: flex;
-            align-items: center; justify-content: center; font-size: 2rem;
-            margin: 0 auto 1.5rem auto; border: 1px solid rgba(34, 197, 94, 0.3);
-        }
-        .confirmation-card h1 { font-size: 2rem; font-weight: 900; letter-spacing: 1px; margin-bottom: 0.5rem; text-transform: uppercase; }
-        .confirmation-card > p { color: var(--text-muted); font-size: 1rem; margin-bottom: 2rem; }
-
-        .summary-box {
-            background-color: rgba(0, 0, 0, 0.4); border: 1px solid var(--border-color);
-            border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; text-align: left;
-        }
-        .summary-row { display: flex; justify-content: space-between; margin-bottom: 0.75rem; font-size: 0.95rem; }
-        .summary-row:last-child {
-            margin-bottom: 0; padding-top: 0.75rem; border-top: 1px solid var(--border-color);
-            font-size: 1.1rem; font-weight: 700; color: var(--accent-red);
-        }
-        .summary-row span:first-child { color: var(--text-muted); }
-        .summary-row:last-child span:first-child { color: var(--text-main); }
-
-        .btn-home {
-            display: inline-block; background: linear-gradient(135deg, var(--accent-red), #e11d48);
-            color: #ffffff; padding: 0.85rem 2rem; border-radius: 6px; font-weight: 700;
-            font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase;
-            box-shadow: 0 4px 20px rgba(255, 51, 102, 0.4); transition: var(--transition);
-        }
-        .btn-home:hover { transform: translateY(-2px); box-shadow: 0 6px 25px rgba(255, 51, 102, 0.6); }
-
-        footer { background-color: var(--accent-orange); color: #0b0f19; padding: 3rem 5% 1.5rem 5%; text-align: center; }
-        .footer-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem; max-width: 1200px; margin: 0 auto; }
-        .footer-social ul, .footer-nav ul { display: flex; gap: 1.5rem; justify-content: center; }
-        .footer-social ul li a, .footer-nav ul li a { color: #1e1b4b; font-weight: 600; font-size: 0.9rem; }
-        footer > p { color: #1e1b4b; font-weight: 600; font-size: 0.85rem; border-top: 1px solid rgba(0,0,0,0.2); padding-top: 1.5rem; margin-top: 1rem; }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
     <header>
         <a href="home.html"><img src="images/logo.png" alt="Next Level Logo"></a>
         <nav>
@@ -92,7 +14,7 @@
                 <li><a href="home.html">HOME</a></li>
                 <li><a href="about.html">ABOUT US</a></li>
                 <li><a href="offers.html">OFFERS</a></li>
-                <li><a href="booking.html">BOOKING</a></li>
+                <li><a href="booking.html" class="active">BOOKING</a></li>
                 <li><a href="faq.html">FAQ</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
             </ul>
@@ -100,62 +22,62 @@
     </header>
 
     <main>
-        <section class="confirmation-card">
-            <div class="success-icon">&#10003;</div>
+        <div class="confirmation-card">
+            <div class="success-icon">&#10004;</div>
             <h1>BOOKING CONFIRMED!</h1>
-            <p id="confirmSubtitle">Thank you for booking with Next Level Gaming Arena.</p>
+            <p id="confirmSubtitle" style="color: var(--text-muted); font-size: 1.1rem; margin-top: 0.5rem; text-align: center;">Your session has been successfully booked.</p>
 
             <div class="summary-box">
                 <div class="summary-row">
-                    <span>Booking Reference:</span>
-                    <span>#NL-88421</span>
+                    <span>NAME:</span>
+                    <strong id="clientNameDisplay" style="color: var(--text-main);">Gamer</strong>
                 </div>
                 <div class="summary-row">
-                    <span>Client Name:</span>
-                    <span id="clientNameDisplay">Valued Gamer</span>
+                    <span>GUESTS:</span>
+                    <strong id="guestCountDisplay" style="color: var(--text-main);">1</strong>
                 </div>
                 <div class="summary-row">
-                    <span>Number of Guests:</span>
-                    <span id="guestCountDisplay">1</span>
+                    <span>BOOKED EXPERIENCES:</span>
+                    <strong id="packagesDisplay" style="color: var(--accent-purple);">Standard Package</strong>
                 </div>
+                <hr class="divider">
                 <div class="summary-row">
-                    <span>Selected Packages:</span>
-                    <span id="packagesDisplay" style="text-align: right; max-width: 60%;">Loading...</span>
-                </div>
-                <div class="summary-row">
-                    <span>Subtotal:</span>
-                    <span id="subtotalDisplay">R 0</span>
+                    <span>SUBTOTAL:</span>
+                    <span id="subtotalDisplay">R 0.00</span>
                 </div>
                 <div class="summary-row">
                     <span id="discountTextLabel">Discount applied:</span>
-                    <span id="discountDisplay" style="color: #22c55e;">-R 0</span>
+                    <span id="discountDisplay" style="color: var(--accent-cyan);">-R 0.00</span>
                 </div>
                 <div class="summary-row">
                     <span>VAT (15%):</span>
-                    <span id="vatDisplay">R 0</span>
+                    <span id="vatDisplay">R 0.00</span>
                 </div>
-                <div class="summary-row">
-                    <span>Final Total Paid:</span>
-                    <span id="finalDisplay">R 0</span>
+                <div class="summary-row total-row">
+                    <span>TOTAL PAID / DUE:</span>
+                    <span id="finalDisplay" style="color: var(--accent-cyan); font-weight: 700;">R 0.00</span>
                 </div>
             </div>
 
-            <div class="action-buttons">
-                <a href="home.html" class="btn-home">RETURN TO HOME</a>
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="home.html" class="btn-primary">RETURN TO HOME</a>
             </div>
-        </section>
+        </div>
     </main>
 
     <footer>
         <div class="footer-content">
-            <div class="footer-social">
-                <p>CONNECT. PLAY</p>
-                <ul>
-                    <li><a href="#discord">Discord</a></li>
-                    <li><a href="#instagram">Instagram</a></li>
-                    <li><a href="#twitter">Twitter</a></li>
-                    <li><a href="#tiktok">TikTok</a></li>
-                </ul>
+            <div class="footer-brand-social">
+                <a href="home.html"><img src="images/logo.png" alt="Next Level Logo" class="footer-logo"></a>
+                <div class="footer-social">
+                    <p>CONNECT. PLAY</p>
+                    <ul>
+                        <li><a href="#discord">DISCORD</a></li>
+                        <li><a href="#instagram">INSTAGRAM</a></li>
+                        <li><a href="#twitter">TWITTER</a></li>
+                        <li><a href="#tiktok">TIKTOK</a></li>
+                    </ul>
+                </div>
             </div>
             <nav class="footer-nav">
                 <ul>
@@ -169,46 +91,6 @@
         <p>&copy;2023 NEXT LEVEL GAMING ARENA. ALL RIGHTS RESERVED.</p>
     </footer>
 
-    <!-- Dynamic Data Injection Script -->
-    <script>
-        const clientName = localStorage.getItem('clientName') || 'Valued Gamer';
-        const guestCount = localStorage.getItem('guestCount') || '1';
-        const savedPackages = JSON.parse(localStorage.getItem('selectedPackages')) || [
-            { name: 'ULTIMATE GAMER PASS', price: 1500 },
-            { name: 'ESPORTS TRAINING', price: 1500 },
-            { name: 'ESCAPE ROOM CHALLENGE', price: 750 }
-        ];
-
-        document.getElementById('clientNameDisplay').textContent = clientName;
-        document.getElementById('guestCountDisplay').textContent = guestCount;
-        document.getElementById('confirmSubtitle').textContent = `Thank you, ${clientName}! Your session for ${guestCount} guest(s) has been successfully secured.`;
-
-        let subtotal = 0;
-        const packageNames = [];
-
-        savedPackages.forEach(pkg => {
-            subtotal += pkg.price;
-            packageNames.push(pkg.name);
-        });
-
-        document.getElementById('packagesDisplay').textContent = packageNames.join(', ');
-
-        const count = savedPackages.length;
-        let discountPercent = 0;
-        if (count === 2) discountPercent = 5;
-        else if (count === 3) discountPercent = 10;
-        else if (count > 3) discountPercent = 15;
-
-        const discountAmount = (subtotal * discountPercent) / 100;
-        const discountedTotal = subtotal - discountAmount;
-        const vat = discountedTotal * 0.15;
-        const finalCost = discountedTotal + vat;
-
-        document.getElementById('subtotalDisplay').textContent = `R ${subtotal.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
-        document.getElementById('discountTextLabel').textContent = `Discount applied (${discountPercent}%):`;
-        document.getElementById('discountDisplay').textContent = `-R ${discountAmount.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
-        document.getElementById('vatDisplay').textContent = `R ${vat.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
-        document.getElementById('finalDisplay').textContent = `R ${finalCost.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>

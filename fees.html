@@ -3,75 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fees | Next Level Gaming Arena</title>
-    <style>
-        /* --- CSS Reset & Variables --- */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root {
-            --bg-color: #000000;
-            --card-bg: #0d111a;
-            --accent-red: #ff3366;
-            --accent-purple: #8b5cf6;
-            --accent-orange: #ff7f00;
-            --text-main: #ffffff;
-            --text-muted: #94a3b8;
-            --border-color: #1e293b;
-            --transition: all 0.3s ease;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        a { text-decoration: none; color: inherit; }
-        ul { list-style: none; }
-
-        header {
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 1rem 5%; background-color: rgba(0, 0, 0, 0.95);
-            border-bottom: 1px solid var(--border-color); position: sticky; top: 0; z-index: 1000;
-        }
-        header img { height: 60px; width: auto; object-fit: contain; filter: brightness(0) invert(1); }
-        nav ul { display: flex; gap: 2rem; }
-        nav ul li a { font-weight: 600; font-size: 0.95rem; color: var(--text-muted); transition: var(--transition); }
-        nav ul li a:hover, nav ul li a.active { color: var(--accent-red); }
-
-        main { max-width: 1200px; margin: 0 auto; padding: 4rem 1.5rem; width: 100%; }
-        .fees-container { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
-        .fees-image img { width: 100%; border-radius: 12px; border: 1px solid var(--border-color); object-fit: cover; max-height: 600px; }
-        .fees-card { background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; padding: 2.5rem; }
-        .fees-card h1 { font-size: 1.8rem; font-weight: 800; margin-bottom: 0.75rem; }
-        .fees-card > p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 2rem; }
-
-        .pricing-table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }
-        .pricing-table th, .pricing-table td { padding: 0.75rem 0.5rem; text-align: left; font-size: 0.95rem; }
-        .pricing-table th { color: var(--accent-purple); font-size: 0.85rem; border-bottom: 1px solid var(--border-color); }
-        .pricing-table td:last-child { text-align: right; font-weight: 600; }
-        .pricing-table tr td { border-bottom: 1px solid rgba(30, 41, 59, 0.5); }
-        .pricing-table tr.total-row td { border-top: 2px solid var(--border-color); border-bottom: none; font-size: 1.1rem; color: var(--text-main); padding-top: 1rem; }
-        .pricing-table tr.final-row td { border-top: 2px solid var(--accent-red); border-bottom: none; font-size: 1.25rem; color: var(--accent-red); padding-top: 1rem; }
-
-        .divider { border: none; border-top: 1px solid var(--border-color); margin: 1.5rem 0; }
-        .action-buttons { display: flex; gap: 1rem; margin-top: 2rem; }
-        .btn-proceed { flex: 1; background: linear-gradient(135deg, var(--accent-red), #e11d48); color: #fff; padding: 0.85rem; border-radius: 6px; font-weight: 700; text-align: center; text-transform: uppercase; }
-        .btn-cancel { flex: 1; background: transparent; color: var(--text-muted); border: 1px solid var(--border-color); padding: 0.85rem; border-radius: 6px; font-weight: 600; text-align: center; text-transform: uppercase; }
-
-        footer { background-color: var(--accent-orange); color: #0b0f19; padding: 3rem 5% 1.5rem 5%; text-align: center; margin-top: 5rem; }
-        .footer-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem; max-width: 1200px; margin: 0 auto; }
-        .footer-social ul, .footer-nav ul { display: flex; gap: 1.5rem; justify-content: center; list-style: none; }
-        .footer-social ul li a, .footer-nav ul li a { color: #1e1b4b; font-weight: 600; font-size: 0.9rem; }
-        footer > p { color: #1e1b4b; font-weight: 600; font-size: 0.85rem; border-top: 1px solid rgba(0,0,0,0.2); padding-top: 1.5rem; margin-top: 1rem; }
-
-        @media (max-width: 900px) { .fees-container { grid-template-columns: 1fr; } }
-    </style>
+    <title>Booking Summary & Fees | Next Level Gaming Arena</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
     <header>
         <a href="home.html"><img src="images/logo.png" alt="Next Level Logo"></a>
         <nav>
@@ -79,92 +14,84 @@
                 <li><a href="home.html">HOME</a></li>
                 <li><a href="about.html">ABOUT US</a></li>
                 <li><a href="offers.html">OFFERS</a></li>
-                <li><a href="booking.html">BOOKING</a></li>
+                <li><a href="booking.html" class="active">BOOKING</a></li>
                 <li><a href="faq.html">FAQ</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section class="fees-container">
+    <main class="fees-main">
+        <div class="fees-container">
             <div class="fees-image">
-                <img src="images/fees.png" alt="Gamer holding a video game controller">
+                <img src="images/fees.png" alt="High performance arcade and setup display">
             </div>
 
             <div class="fees-card">
-                <h1>✶ KNOW YOUR COST ✶</h1>
-                <p>Transparent pricing at a glance. Review your savings, total tax, and final cost before securing your spot.</p>
+                <h2>FEES &amp; BREAKDOWN</h2>
+                <p style="color: var(--text-muted); margin-bottom: 1.5rem; font-size: 0.9rem;">Review your selected items and applied multi-pass discounts.</p>
 
-                <!-- Dynamic Selected Items Table -->
                 <table class="pricing-table">
                     <thead>
                         <tr>
-                            <th>SELECTED BOOKINGS</th>
-                            <th>PRICE</th>
+                            <th>SELECTED ITEM</th>
+                            <th style="text-align: right;">PRICE</th>
                         </tr>
                     </thead>
                     <tbody id="selectedItemsBody">
-                        <!-- Injected via JavaScript -->
+                        <!-- Dynamic items generated by script.js -->
+                    </tbody>
+                    <tbody>
+                        <tr class="total-row">
+                            <td>SUBTOTAL</td>
+                            <td id="subtotalCell" style="text-align: right;">R 0.00</td>
+                        </tr>
+                        <tr>
+                            <td id="discountLabel" style="color: var(--accent-cyan);">Discount Applied</td>
+                            <td id="discountCell" style="color: var(--accent-cyan); text-align: right;">-R 0.00</td>
+                        </tr>
+                        <tr class="total-row">
+                            <td>TOTAL AFTER DISCOUNT</td>
+                            <td id="discountedTotalCell" style="text-align: right;">R 0.00</td>
+                        </tr>
+                        <tr>
+                            <td>Price After Discount</td>
+                            <td id="afterDiscountCell" style="text-align: right;">R 0.00</td>
+                        </tr>
+                        <tr>
+                            <td>VAT (15%)</td>
+                            <td id="vatCell" style="text-align: right;">R 0.00</td>
+                        </tr>
+                        <tr class="final-row">
+                            <td>FINAL TOTAL COST</td>
+                            <td id="finalCostCell" style="text-align: right; color: var(--accent-cyan); font-weight: 700;">R 0.00</td>
+                        </tr>
                     </tbody>
                 </table>
 
                 <hr class="divider">
 
-                <!-- Subtotal and Discount Table -->
-                <table class="pricing-table">
-                    <tbody>
-                        <tr class="total-row">
-                            <td><strong>SUBTOTAL</strong></td>
-                            <td id="subtotalCell"><strong>R 0</strong></td>
-                        </tr>
-                        <tr>
-                            <td id="discountLabel">Discount (0%)</td>
-                            <td id="discountCell" style="color: #22c55e;">-R 0</td>
-                        </tr>
-                        <tr class="total-row">
-                            <td><strong>DISCOUNTED TOTAL</strong></td>
-                            <td id="discountedTotalCell"><strong>R 0</strong></td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <!-- Tax & Final Total Table -->
-                <table class="pricing-table" style="margin-top: 1rem;">
-                    <tbody>
-                        <tr>
-                            <td>After Discount</td>
-                            <td id="afterDiscountCell">R 0</td>
-                        </tr>
-                        <tr>
-                            <td>VAT (15%)</td>
-                            <td id="vatCell">R 0</td>
-                        </tr>
-                        <tr class="final-row">
-                            <td><strong>FINAL COST</strong></td>
-                            <td id="finalCostCell"><strong>R 0</strong></td>
-                        </tr>
-                    </tbody>
-                </table>
-
                 <div class="action-buttons">
-                    <a href="confirm.html" class="btn-proceed">PROCEED TO BOOKING</a>
-                    <a href="offers.html" class="btn-cancel">CANCEL BOOKING</a>
+                    <a href="booking.html" class="btn-cancel">BACK TO EDIT</a>
+                    <a href="confirm.html" class="btn-primary">CONFIRM BOOKING</a>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
 
     <footer>
         <div class="footer-content">
-            <div class="footer-social">
-                <p>CONNECT. PLAY</p>
-                <ul>
-                    <li><a href="#discord">Discord</a></li>
-                    <li><a href="#instagram">Instagram</a></li>
-                    <li><a href="#twitter">Twitter</a></li>
-                    <li><a href="#tiktok">TikTok</a></li>
-                </ul>
+            <div class="footer-brand-social">
+                <a href="home.html"><img src="images/logo.png" alt="Next Level Logo" class="footer-logo"></a>
+                <div class="footer-social">
+                    <p>CONNECT. PLAY</p>
+                    <ul>
+                        <li><a href="#discord">DISCORD</a></li>
+                        <li><a href="#instagram">INSTAGRAM</a></li>
+                        <li><a href="#twitter">TWITTER</a></li>
+                        <li><a href="#tiktok">TIKTOK</a></li>
+                    </ul>
+                </div>
             </div>
             <nav class="footer-nav">
                 <ul>
@@ -175,45 +102,9 @@
                 </ul>
             </nav>
         </div>
-        <p>&copy;2026 NEXT LEVEL GAMING ARENA. ALL RIGHTS RESERVED.</p>
+        <p>&copy;2023 NEXT LEVEL GAMING ARENA. ALL RIGHTS RESERVED.</p>
     </footer>
 
-    <!-- Dynamic Calculation Script -->
-    <script>
-        const savedPackages = JSON.parse(localStorage.getItem('selectedPackages')) || [
-            { name: 'ULTIMATE GAMER PASS', price: 1500 },
-            { name: 'ESPORTS TRAINING', price: 1500 },
-            { name: 'ESCAPE ROOM CHALLENGE', price: 750 }
-        ];
-
-        const tbody = document.getElementById('selectedItemsBody');
-        let subtotal = 0;
-
-        savedPackages.forEach(pkg => {
-            subtotal += pkg.price;
-            const tr = document.createElement('tr');
-            tr.innerHTML = `<td>${pkg.name}</td><td>R ${pkg.price.toLocaleString()}</td>`;
-            tbody.appendChild(tr);
-        });
-
-        const count = savedPackages.length;
-        let discountPercent = 0;
-        if (count === 2) discountPercent = 5;
-        else if (count === 3) discountPercent = 10;
-        else if (count > 3) discountPercent = 15;
-
-        const discountAmount = (subtotal * discountPercent) / 100;
-        const discountedTotal = subtotal - discountAmount;
-        const vat = discountedTotal * 0.15;
-        const finalCost = discountedTotal + vat;
-
-        document.getElementById('subtotalCell').innerHTML = `<strong>R ${subtotal.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</strong>`;
-        document.getElementById('discountLabel').textContent = `Discount (${discountPercent}% - ${count} Bookings)`;
-        document.getElementById('discountCell').textContent = `-R ${discountAmount.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
-        document.getElementById('discountedTotalCell').innerHTML = `<strong>R ${discountedTotal.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</strong>`;
-        document.getElementById('afterDiscountCell').textContent = `R ${discountedTotal.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
-        document.getElementById('vatCell').textContent = `R ${vat.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
-        document.getElementById('finalCostCell').innerHTML = `<strong>R ${finalCost.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</strong>`;
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>

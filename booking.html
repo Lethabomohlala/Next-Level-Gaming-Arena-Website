@@ -4,121 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking | Next Level Gaming Arena</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root {
-            --bg-color: #000000;
-            --card-bg: #0d111a;
-            --accent-red: #ff3366;
-            --accent-purple: #8b5cf6;
-            --accent-orange: #ff7f00;
-            --text-main: #ffffff;
-            --text-muted: #94a3b8;
-            --border-color: #1e293b;
-            --transition: all 0.3s ease;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        a { text-decoration: none; color: inherit; }
-        ul { list-style: none; }
-
-        header {
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 1rem 5%; background-color: rgba(0, 0, 0, 0.95);
-            border-bottom: 1px solid var(--border-color); position: sticky; top: 0; z-index: 1000;
-        }
-        header img { height: 60px; width: auto; object-fit: contain; filter: brightness(0) invert(1); }
-        nav ul { display: flex; gap: 2rem; }
-        nav ul li a { font-weight: 600; font-size: 0.95rem; letter-spacing: 1px; color: var(--text-muted); transition: var(--transition); }
-        nav ul li a:hover, nav ul li a.active { color: var(--accent-red); }
-
-        main { flex-grow: 1; display: flex; align-items: center; justify-content: center; padding: 4rem 1.5rem; width: 100%; }
-        .client-details-card {
-            background-color: var(--bg-color); border: 1px solid var(--border-color);
-            border-radius: 16px; padding: 3rem 2.5rem; width: 100%; max-width: 1000px;
-            box-shadow: 0 0 30px rgba(255, 255, 255, 0.05); text-align: center;
-        }
-        .client-details-card h1 { font-size: 1.75rem; font-weight: 800; letter-spacing: 2px; margin-bottom: 2rem; text-transform: uppercase; }
-
-        /* Two-column layout grid */
-        .booking-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2.5rem;
-            text-align: left;
-            margin-bottom: 2rem;
-        }
-
-        .form-group { margin-bottom: 1.5rem; text-align: left; }
-        .form-group label { display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; }
-        .form-input {
-            width: 100%; padding: 0.85rem 1.25rem; border-radius: 30px;
-            border: 1px solid var(--border-color); background-color: #ffffff; color: #000000;
-            font-size: 0.95rem; outline: none; transition: var(--transition);
-        }
-        .form-input.error { border-color: var(--accent-red); background-color: #fff5f5; }
-        .error-message { color: var(--accent-red); font-size: 0.8rem; margin-top: 0.4rem; display: none; padding-left: 0.75rem; }
-
-        /* Package Checkbox Styles */
-        .pkg-selection-box {
-            background-color: var(--card-bg); border: 1px solid var(--border-color);
-            border-radius: 12px; padding: 1.25rem; display: flex; flex-direction: column; gap: 1rem;
-            height: calc(100% - 1.8rem);
-        }
-        .pkg-item { display: flex; align-items: center; justify-content: space-between; cursor: pointer; font-size: 0.95rem; padding: 0.25rem 0; }
-        .pkg-item-left { display: flex; align-items: center; gap: 0.75rem; }
-        .pkg-item input { accent-color: var(--accent-red); width: 18px; height: 18px; }
-        .pkg-price { color: var(--accent-purple); font-weight: 700; font-size: 0.9rem; }
-
-        /* Guest Counter */
-        .guests-container { margin: 1.5rem 0 0 0; text-align: left; }
-        .counter-wrapper { display: flex; align-items: center; justify-content: space-between; margin-top: 0.75rem; padding: 0 1rem; }
-        .counter-btn {
-            width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--text-main);
-            background: transparent; color: var(--text-main); font-size: 1.25rem; cursor: pointer;
-            display: flex; align-items: center; justify-content: center; transition: var(--transition);
-        }
-        .counter-btn:hover { background-color: rgba(255, 255, 255, 0.15); }
-        .guest-count-display { font-size: 1.4rem; font-weight: 700; }
-
-        .btn-confirm {
-            width: 100%; padding: 0.9rem; border-radius: 30px; border: none;
-            background-color: #ffffff; color: #000000; font-weight: 800; font-size: 0.95rem;
-            letter-spacing: 1px; cursor: pointer; text-transform: uppercase; transition: var(--transition);
-        }
-        .btn-confirm:hover { background-color: #e4e4e7; transform: translateY(-2px); }
-
-        footer { background-color: var(--accent-orange); color: #0b0f19; padding: 3rem 5% 1.5rem 5%; text-align: center; }
-        .footer-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem; max-width: 1200px; margin: 0 auto; }
-        .footer-social ul, .footer-nav ul { display: flex; gap: 1.5rem; justify-content: center; }
-        .footer-social ul li a, .footer-nav ul li a { color: #1e1b4b; font-weight: 600; font-size: 0.9rem; }
-        footer > p { color: #1e1b4b; font-weight: 600; font-size: 0.85rem; border-top: 1px solid rgba(0,0,0,0.2); padding-top: 1.5rem; margin-top: 1rem; }
-
-        /* Responsive Breakpoint for Mobile View */
-        @media (max-width: 820px) {
-            .booking-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-            .pkg-selection-box {
-                height: auto;
-            }
-            .client-details-card {
-                padding: 2rem 1.5rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
     <header>
         <a href="home.html"><img src="images/logo.png" alt="Next Level Logo"></a>
         <nav>
@@ -134,94 +22,88 @@
     </header>
 
     <main>
-        <section class="client-details-card">
-            <h1>BOOKING DETAILS</h1>
-
+        <div class="client-details-card">
+            <h1>BOOK YOUR SESSION</h1>
             <form id="bookingForm" novalidate>
-                <div class="booking-grid">
-                    <!-- Left Column: Package Choices -->
-                    <div class="booking-column">
-                        <div class="form-group" style="height: 100%;">
-                            <label>Select Packages &amp; Experiences *</label>
-                            <div class="pkg-selection-box">
-                                <label class="pkg-item">
-                                    <div class="pkg-item-left">
-                                        <input type="checkbox" name="pkg" value="ULTIMATE GAMER PASS" data-price="1500" checked>
-                                        <span>Ultimate Gamer Pass</span>
-                                    </div>
-                                    <span class="pkg-price">R 1 500</span>
-                                </label>
-                                <label class="pkg-item">
-                                    <div class="pkg-item-left">
-                                        <input type="checkbox" name="pkg" value="ESPORTS TRAINING" data-price="1500" checked>
-                                        <span>Esports Training</span>
-                                    </div>
-                                    <span class="pkg-price">R 1 500</span>
-                                </label>
-                                <label class="pkg-item">
-                                    <div class="pkg-item-left">
-                                        <input type="checkbox" name="pkg" value="ESCAPE ROOM CHALLENGE" data-price="750" checked>
-                                        <span>Escape Room Challenge</span>
-                                    </div>
-                                    <span class="pkg-price">R 750</span>
-                                </label>
-                                <label class="pkg-item">
-                                    <div class="pkg-item-left">
-                                        <input type="checkbox" name="pkg" value="VIRTUAL REALITY EXPERIENCE" data-price="750">
-                                        <span>Virtual Reality Experience</span>
-                                    </div>
-                                    <span class="pkg-price">R 750</span>
-                                </label>
+                <div class="form-group">
+                    <label for="fullName">FULL NAME *</label>
+                    <input type="text" id="fullName" class="form-input" placeholder="e.g. John Doe">
+                    <div class="error-message" id="nameError">Please enter your full name.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">EMAIL ADDRESS *</label>
+                    <input type="email" id="email" class="form-input" placeholder="e.g. john@example.com">
+                    <div class="error-message" id="emailError">Please enter a valid email address.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">PHONE NUMBER *</label>
+                    <input type="tel" id="phone" class="form-input" placeholder="e.g. +27 82 123 4567">
+                    <div class="error-message" id="phoneError">Please enter a valid contact number.</div>
+                </div>
+
+                <div class="form-group">
+                    <label>SELECT PACKAGES &amp; EXPERIENCES *</label>
+                    <div class="pkg-selection-box">
+                        <label class="pkg-item">
+                            <div class="pkg-item-left">
+                                <input type="checkbox" name="pkg" value="ULTIMATE GAMER PASS" data-price="1500" checked>
+                                <span>ULTIMATE GAMER PASS</span>
                             </div>
-                        </div>
-                    </div>
-
-                    <!-- Right Column: Client Information & Counter -->
-                    <div class="booking-column">
-                        <div class="form-group">
-                            <label for="fullName">Name &amp; Surname *</label>
-                            <input type="text" id="fullName" class="form-input" placeholder="John Doe">
-                            <div id="nameError" class="error-message">Please enter your full name.</div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" class="form-input" placeholder="Johndoe@example.com">
-                            <div id="emailError" class="error-message">Please enter a valid email address.</div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="phone">Phone Number *</label>
-                            <input type="tel" id="phone" class="form-input" placeholder="081-992-4545">
-                            <div id="phoneError" class="error-message">Please enter a valid phone number.</div>
-                        </div>
-
-                        <div class="guests-container">
-                            <label>Number Of Guests *</label>
-                            <div class="counter-wrapper">
-                                <button type="button" class="counter-btn" id="decrementBtn">&minus;</button>
-                                <span class="guest-count-display" id="guestCount">1</span>
-                                <button type="button" class="counter-btn" id="incrementBtn">&plus;</button>
+                            <span class="pkg-price">R 1,500</span>
+                        </label>
+                        <label class="pkg-item">
+                            <div class="pkg-item-left">
+                                <input type="checkbox" name="pkg" value="VIRTUAL REALITY EXPERIENCE" data-price="1500">
+                                <span>VIRTUAL REALITY EXPERIENCE</span>
                             </div>
-                        </div>
+                            <span class="pkg-price">R 1,500</span>
+                        </label>
+                        <label class="pkg-item">
+                            <div class="pkg-item-left">
+                                <input type="checkbox" name="pkg" value="ESPORTS TRAINING" data-price="1500" checked>
+                                <span>ESPORTS TRAINING PACKAGE</span>
+                            </div>
+                            <span class="pkg-price">R 1,500</span>
+                        </label>
+                        <label class="pkg-item">
+                            <div class="pkg-item-left">
+                                <input type="checkbox" name="pkg" value="ESCAPE ROOM CHALLENGE" data-price="750" checked>
+                                <span>ESCAPE ROOM CHALLENGE</span>
+                            </div>
+                            <span class="pkg-price">R 750</span>
+                        </label>
                     </div>
                 </div>
 
-                <button type="submit" class="btn-confirm">CONFIRM DETAILS</button>
+                <div class="guests-container">
+                    <label>NUMBER OF GUESTS</label>
+                    <div class="counter-wrapper">
+                        <button type="button" class="counter-btn" id="decrementBtn">-</button>
+                        <span class="guest-count-display" id="guestCount">1</span>
+                        <button type="button" class="counter-btn" id="incrementBtn">+</button>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primary" style="width: 100%;">PROCEED TO SUMMARY</button>
             </form>
-        </section>
+        </div>
     </main>
 
     <footer>
         <div class="footer-content">
-            <div class="footer-social">
-                <p>CONNECT. PLAY</p>
-                <ul>
-                    <li><a href="#discord">Discord</a></li>
-                    <li><a href="#instagram">Instagram</a></li>
-                    <li><a href="#twitter">Twitter</a></li>
-                    <li><a href="#tiktok">TikTok</a></li>
-                </ul>
+            <div class="footer-brand-social">
+                <a href="home.html"><img src="images/logo.png" alt="Next Level Logo" class="footer-logo"></a>
+                <div class="footer-social">
+                    <p>CONNECT. PLAY</p>
+                    <ul>
+                        <li><a href="#discord">DISCORD</a></li>
+                        <li><a href="#instagram">INSTAGRAM</a></li>
+                        <li><a href="#twitter">TWITTER</a></li>
+                        <li><a href="#tiktok">TIKTOK</a></li>
+                    </ul>
+                </div>
             </div>
             <nav class="footer-nav">
                 <ul>
@@ -232,60 +114,9 @@
                 </ul>
             </nav>
         </div>
-        <p>&copy;2026 NEXT LEVEL GAMING ARENA. ALL RIGHTS RESERVED.</p>
+        <p>&copy;2023 NEXT LEVEL GAMING ARENA. ALL RIGHTS RESERVED.</p>
     </footer>
 
-    <script>
-        let currentGuests = 1;
-        const guestCountDisplay = document.getElementById('guestCount');
-        document.getElementById('decrementBtn').addEventListener('click', () => {
-            if (currentGuests > 1) { currentGuests--; guestCountDisplay.textContent = currentGuests; }
-        });
-        document.getElementById('incrementBtn').addEventListener('click', () => {
-            currentGuests++; guestCountDisplay.textContent = currentGuests;
-        });
-
-        const form = document.getElementById('bookingForm');
-        const fullName = document.getElementById('fullName');
-        const email = document.getElementById('email');
-        const phone = document.getElementById('phone');
-
-        function isValidEmail(val) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val); }
-
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            let isValid = true;
-
-            if (fullName.value.trim() === '') {
-                fullName.classList.add('error'); document.getElementById('nameError').style.display = 'block'; isValid = false;
-            } else { fullName.classList.remove('error'); document.getElementById('nameError').style.display = 'none'; }
-
-            if (!isValidEmail(email.value.trim())) {
-                email.classList.add('error'); document.getElementById('emailError').style.display = 'block'; isValid = false;
-            } else { email.classList.remove('error'); document.getElementById('emailError').style.display = 'none'; }
-
-            if (phone.value.trim().length < 7) {
-                phone.classList.add('error'); document.getElementById('phoneError').style.display = 'block'; isValid = false;
-            } else { phone.classList.remove('error'); document.getElementById('phoneError').style.display = 'none'; }
-
-            if (isValid) {
-                const selectedPackages = [];
-                document.querySelectorAll('input[name="pkg"]:checked').forEach(cb => {
-                    selectedPackages.push({ name: cb.value, price: parseInt(cb.dataset.price) });
-                });
-
-                if (selectedPackages.length === 0) {
-                    alert('Please select at least one package or experience to proceed.');
-                    return;
-                }
-
-                localStorage.setItem('selectedPackages', JSON.stringify(selectedPackages));
-                localStorage.setItem('clientName', fullName.value.trim());
-                localStorage.setItem('guestCount', currentGuests);
-
-                window.location.href = 'fees.html';
-            }
-        });
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>

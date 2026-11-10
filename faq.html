@@ -4,268 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ | Next Level Gaming Arena</title>
-    <style>
-        /* --- CSS Reset & Variables --- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --bg-color: #000000;
-            --card-bg: #0d111a;
-            --accent-red: #ff3366;
-            --accent-purple: #8b5cf6;
-            --accent-orange: #ff7f00;
-            --text-main: #ffffff;
-            --text-muted: #94a3b8;
-            --border-color: #1e293b;
-            --transition: all 0.3s ease;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        /* --- Header & Navigation --- */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 5%;
-            background-color: rgba(0, 0, 0, 0.95);
-            border-bottom: 1px solid var(--border-color);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            backdrop-filter: blur(10px);
-        }
-
-        header img {
-            height: 60px;
-            width: auto;
-            object-fit: contain;
-            filter: brightness(0) invert(1);
-        }
-
-        nav ul {
-            display: flex;
-            gap: 2rem;
-        }
-
-        nav ul li a {
-            font-weight: 600;
-            font-size: 0.95rem;
-            letter-spacing: 1px;
-            color: var(--text-muted);
-            transition: var(--transition);
-        }
-
-        nav ul li a:hover,
-        nav ul li a.active {
-            color: var(--accent-red);
-            text-shadow: 0 0 10px rgba(255, 51, 102, 0.4);
-        }
-
-        /* --- Main Content Layout --- */
-        main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 4rem 1.5rem;
-            width: 100%;
-        }
-
-        .faq-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: flex-start;
-        }
-
-        .faq-image img {
-            width: 100%;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
-            object-fit: cover;
-            max-height: 600px;
-        }
-
-        .faq-content h1 {
-            font-size: 2.2rem;
-            font-weight: 900;
-            letter-spacing: 1px;
-            line-height: 1.2;
-            margin-bottom: 2rem;
-            background: linear-gradient(135deg, #fff 30%, var(--accent-red));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        /* Accordion Styling */
-        .faq-list {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        details {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            overflow: hidden;
-            transition: var(--transition);
-        }
-
-        details[open] {
-            border-color: var(--accent-purple);
-            box-shadow: 0 5px 20px rgba(139, 92, 246, 0.15);
-        }
-
-        summary {
-            padding: 1.2rem 1.5rem;
-            font-weight: 700;
-            font-size: 1.05rem;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: var(--text-main);
-            user-select: none;
-            transition: var(--transition);
-        }
-
-        summary:hover {
-            color: var(--accent-red);
-        }
-
-        summary span {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            transition: transform 0.3s ease;
-        }
-
-        details[open] summary span {
-            transform: rotate(45deg);
-            color: var(--accent-red);
-        }
-
-        details p {
-            padding: 0 1.5rem 1.5rem 1.5rem;
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.7;
-            border-top: 1px solid rgba(30, 41, 59, 0.5);
-            margin-top: 0.5rem;
-            padding-top: 1rem;
-        }
-
-        /* --- Footer (Orange Banner) --- */
-        footer {
-            background-color: var(--accent-orange);
-            color: #0b0f19;
-            border-top: 1px solid var(--border-color);
-            padding: 3rem 5% 1.5rem 5%;
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-            text-align: center;
-            margin-top: 5rem;
-        }
-
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            width: 100%;
-        }
-
-        .footer-social p {
-            font-weight: 700;
-            margin-bottom: 0.75rem;
-            letter-spacing: 1px;
-            color: #0b0f19;
-        }
-
-        .footer-social ul,
-        .footer-nav ul {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-        }
-
-        .footer-social ul li a,
-        .footer-nav ul li a {
-            color: #1e1b4b;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: var(--transition);
-        }
-
-        .footer-social ul li a:hover,
-        .footer-nav ul li a:hover {
-            color: #ffffff;
-        }
-
-        footer > p {
-            color: #1e1b4b;
-            font-weight: 600;
-            font-size: 0.85rem;
-            border-top: 1px solid rgba(0, 0, 0, 0.2);
-            padding-top: 1.5rem;
-            margin-top: 1rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 900px) {
-            .faq-container {
-                grid-template-columns: 1fr;
-            }
-            header {
-                flex-direction: column;
-                gap: 1rem;
-                padding: 1rem;
-            }
-            nav ul {
-                gap: 1rem;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            .footer-content {
-                flex-direction: column;
-                text-align: center;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-    <!-- Header & Navigation -->
     <header>
-        <a href="home.html">
-            <img src="images/logo.png" alt="Next Level Logo">
-        </a>
+        <a href="home.html"><img src="images/logo.png" alt="Next Level Logo"></a>
         <nav>
             <ul>
                 <li><a href="home.html">HOME</a></li>
@@ -278,74 +21,60 @@
         </nav>
     </header>
 
-    <!-- Main Content Area -->
-    <main>
-        <section class="faq-container">
+    <main class="faq-main">
+        <div class="offers-header">
+            <h1>FREQUENTLY ASKED QUESTIONS</h1>
+            <p>Find quick answers to common questions about bookings, equipment, and house rules.</p>
+        </div>
+
+        <div class="faq-container">
             <div class="faq-image">
-                <img src="images/faq.png" alt="Gamers playing competitive video games at gaming stations in the arena">
+                <img src="images/faq.png" alt="Next Level gaming setup with lighting">
             </div>
 
-            <div class="faq-content">
-                <h1>GOT QUESTIONS?<br>WE’VE GOT ANSWERS.</h1>
+            <div class="faq-list">
+                <details>
+                    <summary>What are your operating hours?</summary>
+                    <p>We are open Monday through Thursday from 10:00 AM to 10:00 PM, and Friday through Sunday from 10:00 AM until midnight.</p>
+                </details>
 
-                <div class="faq-list">
-                    <details>
-                        <summary>
-                            What are your operating hours and location?
-                            <span>&#10005;</span>
-                        </summary>
-                        <p>We are open Monday through Saturday from 09:00 AM to 18:00 PM and Closed on Sundays. Please check our official website for local address details.</p>
-                    </details>
+                <details>
+                    <summary>Do I need to make a reservation in advance?</summary>
+                    <p>While walk-ins are welcome based on availability, we strongly recommend booking online in advance—especially for VR stations, Esports coaching, and Escape Rooms.</p>
+                </details>
 
-                    <details>
-                        <summary>
-                            Can I bring my own peripherals or accounts?
-                            <span>&#10005;</span>
-                        </summary>
-                        <p>Yes, players are welcome to bring their own headsets, mice, mechanical keyboards, or controllers. You can also log directly into your personal game accounts like Steam, Riot, Epic Games, or Battle.net.</p>
-                    </details>
+                <details>
+                    <summary>How do the multi-pass discounts work?</summary>
+                    <p>When you book 2 packages/experiences in one transaction, you automatically receive 5% off. Book 3 for a 10% discount, or 4+ for a 15% discount on your subtotal!</p>
+                </details>
 
-                    <details>
-                        <summary>
-                            Age Requirements?
-                            <span>&#10005;</span>
-                        </summary>
-                        <p>Gamers under 12 years old must be accompanied by a parent or legal guardian at all times. Guests aged 12+ are welcome to play unaccompanied during regular business operating hours.</p>
-                    </details>
+                <details>
+                    <summary>Can I bring my own gear (peripherals/controller)?</summary>
+                    <p>Yes! You are welcome to bring your own mouse, keyboard, headset, or controller. All machines have accessible plug-and-play USB ports.</p>
+                </details>
 
-                    <details>
-                        <summary>
-                            Food, Drinks &amp; Equipment Care?
-                            <span>&#10005;</span>
-                        </summary>
-                        <p>Sealed or bottled beverages are permitted in non-station zones, but intentional damage to gear carries full financial liability. We maintain a zero-tolerance policy for hardware abuse and unsportsmanlike behavior.</p>
-                    </details>
-
-                    <details>
-                        <summary>
-                            Do I need to make a reservation?
-                            <span>&#10005;</span>
-                        </summary>
-                        <p>Walk-ins are always welcome based on station availability, though booking online in advance is recommended. Tabletop and card gaming areas are free and operating on a first-come, first-served basis.</p>
-                    </details>
-                </div>
+                <details>
+                    <summary>Is there an age limit for the arena or Escape Rooms?</summary>
+                    <p>Gamers of all ages are welcome! However, players under the age of 12 must be accompanied by an adult or legal guardian.</p>
+                </details>
             </div>
-        </section>
+        </div>
     </main>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <div class="footer-social">
-                <p>CONNECT. PLAY</p>
-                <ul>
-                    <li><a href="#discord">Discord</a></li>
-                    <li><a href="#instagram">Instagram</a></li>
-                    <li><a href="#twitter">Twitter</a></li>
-                    <li><a href="#tiktok">TikTok</a></li>
-                </ul>
+            <div class="footer-brand-social">
+                <a href="home.html"><img src="images/logo.png" alt="Next Level Logo" class="footer-logo"></a>
+                <div class="footer-social">
+                    <p>CONNECT. PLAY</p>
+                    <ul>
+                        <li><a href="#discord">DISCORD</a></li>
+                        <li><a href="#instagram">INSTAGRAM</a></li>
+                        <li><a href="#twitter">TWITTER</a></li>
+                        <li><a href="#tiktok">TIKTOK</a></li>
+                    </ul>
+                </div>
             </div>
-
             <nav class="footer-nav">
                 <ul>
                     <li><a href="about.html">ABOUT US</a></li>
@@ -355,9 +84,9 @@
                 </ul>
             </nav>
         </div>
-
-        <p>&copy;2026 NEXT LEVEL GAMING ARENA. ALL RIGHTS RESERVED.</p>
+        <p>&copy;2023 NEXT LEVEL GAMING ARENA. ALL RIGHTS RESERVED.</p>
     </footer>
 
+    <script src="js/script.js"></script>
 </body>
 </html>

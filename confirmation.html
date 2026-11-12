@@ -1,96 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking Confirmed | Next Level Gaming Arena</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Next Level Gaming | Booking Confirmed</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
-    <header>
-        <a href="home.html"><img src="images/logo.png" alt="Next Level Logo"></a>
-        <nav>
-            <ul>
-                <li><a href="home.html">HOME</a></li>
-                <li><a href="about.html">ABOUT US</a></li>
-                <li><a href="offers.html">OFFERS</a></li>
-                <li><a href="booking.html" class="active">BOOKING</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <div class="confirmation-card">
-            <div class="success-icon">&#10004;</div>
-            <h1>BOOKING CONFIRMED!</h1>
-            <p id="confirmSubtitle" style="color: var(--text-muted); font-size: 1.1rem; margin-top: 0.5rem; text-align: center;">Your session has been successfully booked.</p>
+  <!-- Navigation Header -->
+  <header class="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo.png" alt="Next Level Logo" />
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT US</a>
+      <a href="offers.html">OFFERS</a>
+      <a href="booking.html" class="active">BOOKING</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
 
-            <div class="summary-box">
-                <div class="summary-row">
-                    <span>NAME:</span>
-                    <strong id="clientNameDisplay" style="color: var(--text-main);">Gamer</strong>
-                </div>
-                <div class="summary-row">
-                    <span>GUESTS:</span>
-                    <strong id="guestCountDisplay" style="color: var(--text-main);">1</strong>
-                </div>
-                <div class="summary-row">
-                    <span>BOOKED EXPERIENCES:</span>
-                    <strong id="packagesDisplay" style="color: var(--accent-purple);">Standard Package</strong>
-                </div>
-                <hr class="divider">
-                <div class="summary-row">
-                    <span>SUBTOTAL:</span>
-                    <span id="subtotalDisplay">R 0.00</span>
-                </div>
-                <div class="summary-row">
-                    <span id="discountTextLabel">Discount applied:</span>
-                    <span id="discountDisplay" style="color: var(--accent-cyan);">-R 0.00</span>
-                </div>
-                <div class="summary-row">
-                    <span>VAT (15%):</span>
-                    <span id="vatDisplay">R 0.00</span>
-                </div>
-                <div class="summary-row total-row">
-                    <span>TOTAL PAID / DUE:</span>
-                    <span id="finalDisplay" style="color: var(--accent-cyan); font-weight: 700;">R 0.00</span>
-                </div>
-            </div>
+  <!-- Confirmation Main Section -->
+  <main class="confirm-page-wrapper">
+    <img src="images/confirm.jpg" alt="PlayStation controllers" class="confirm-bg-img" />
+    <div class="confirm-bg-overlay"></div>
 
-            <div style="text-align: center; margin-top: 2rem;">
-                <a href="home.html" class="btn-primary">RETURN TO HOME</a>
-            </div>
+    <section class="confirm-container">
+      <div class="confirm-header">
+        <h1>BOOKING CONFIRMED!</h1>
+        <p>
+          You’re locked in. Booking request has been sent, our team will contact you soon.
+          <strong>Let the games begin!</strong>
+        </p>
+      </div>
+
+      <!-- Confirmation Summary Rows -->
+      <div class="confirm-details-list" id="confirmationDetailsList">
+        <div class="confirm-row">
+          <span class="confirm-label">BOOKING ID</span>
+          <span class="confirm-value" id="confBookingId">NXL-230110</span>
         </div>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-brand-social">
-                <a href="home.html"><img src="images/logo.png" alt="Next Level Logo" class="footer-logo"></a>
-                <div class="footer-social">
-                    <p>CONNECT. PLAY</p>
-                    <ul>
-                        <li><a href="#discord">DISCORD</a></li>
-                        <li><a href="#instagram">INSTAGRAM</a></li>
-                        <li><a href="#twitter">TWITTER</a></li>
-                        <li><a href="#tiktok">TIKTOK</a></li>
-                    </ul>
-                </div>
-            </div>
-            <nav class="footer-nav">
-                <ul>
-                    <li><a href="about.html">ABOUT US</a></li>
-                    <li><a href="offers.html">OFFERS</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                </ul>
-            </nav>
+        <div class="confirm-row">
+          <span class="confirm-label">NAME &amp; SURNAME</span>
+          <span class="confirm-value" id="confName">John Doe</span>
         </div>
-        <p>&copy;2023 NEXT LEVEL GAMING ARENA. ALL RIGHTS RESERVED.</p>
-    </footer>
+        <div class="confirm-row">
+          <span class="confirm-label">EMAIL ADDRESS</span>
+          <span class="confirm-value" id="confEmail">Johndoe@example.com</span>
+        </div>
+        <div class="confirm-row">
+          <span class="confirm-label">PHONE NUMBER</span>
+          <span class="confirm-value" id="confPhone">0819924545</span>
+        </div>
+        <div class="confirm-row">
+          <span class="confirm-label">DATE</span>
+          <span class="confirm-value" id="confDate">13-11-2026</span>
+        </div>
+        <div class="confirm-row">
+          <span class="confirm-label">STATION PASS</span>
+          <span class="confirm-value" id="confStation">1 HOUR PASS</span>
+        </div>
+        <div class="confirm-row">
+          <span class="confirm-label">NUMBER OF GUESTS</span>
+          <span class="confirm-value" id="confGuests">1</span>
+        </div>
+        <div class="confirm-row">
+          <span class="confirm-label">PAYMENT METHOD</span>
+          <span class="confirm-value">Cash/Card On Arrival</span>
+        </div>
+      </div>
 
-    <script src="js/script.js"></script>
+      <!-- Total Amount Purple Badge -->
+      <div class="confirm-total-wrap">
+        <div class="confirmation-total-pill">
+          <span class="total-pill-title">Total Amount</span>
+          <span class="total-pill-value" id="confGrandTotal">R 00.00</span>
+        </div>
+      </div>
+
+      <!-- Disclaimer Text -->
+      <p class="confirm-disclaimer">
+        Your booking request is being processed by the Next Level team. You will receive a confirmation email within 24 hours detailing your time slot, arena rules, and additional hour pass or upgrade options.
+      </p>
+
+      <!-- Dismiss Action Button -->
+      <div class="confirm-action-wrap">
+        <a href="booking.html" id="dismissBtn" class="confirm-dismiss-btn">DISMISS</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Next Level Logo" />
+        <span class="divider"></span>
+        <span class="tagline">CONNECT. PLAY.</span>
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://discord.com/" target="_blank" rel="noopener noreferrer" aria-label="Discord">
+          <img src="images/discord.png" alt="Discord" />
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <img src="images/instagram.png" alt="Instagram" />
+        </a>
+        <a href="https://x.com/?lang=en" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+          <img src="images/twitter.png" alt="Twitter" />
+        </a>
+        <a href="https://www.tiktok.com/login" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+          <img src="images/tiktok.png" alt="TikTok" />
+        </a>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT US</a>
+        <a href="offers.html">OFFERS</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">CONTACT</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>©2023 NEXT LEVEL GAMING ARENA. ALL RIGHTS RESERVED.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>

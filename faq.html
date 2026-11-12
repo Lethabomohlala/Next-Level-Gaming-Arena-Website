@@ -1,92 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ | Next Level Gaming Arena</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Next Level Gaming | FAQ </title>
+
+<!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
-    <header>
-        <a href="home.html"><img src="images/logo.png" alt="Next Level Logo"></a>
-        <nav>
-            <ul>
-                <li><a href="home.html">HOME</a></li>
-                <li><a href="about.html">ABOUT US</a></li>
-                <li><a href="offers.html">OFFERS</a></li>
-                <li><a href="booking.html">BOOKING</a></li>
-                <li><a href="faq.html" class="active">FAQ</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-            </ul>
+
+<!-- Navigation Header -->
+    <header class="navbar">
+        <a href="index.html" class="nav-logo">
+            <img src="images/logo.png" alt="Next Level Gaming Logo">
+        </a>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="index.html">HOME</a>
+            <a href="about.html">ABOUT US</a>
+            <a href="offers.html">OFFERS</a>
+            <a href="booking.html">BOOKING</a>
+            <a href="faq.html" class="active">FAQ</a>
+            <a href="contact.html">CONTACT</a>
         </nav>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
 
-    <main class="faq-main">
-        <div class="offers-header">
-            <h1>FREQUENTLY ASKED QUESTIONS</h1>
-            <p>Find quick answers to common questions about bookings, equipment, and house rules.</p>
+<!-- FAQ Main Section -->
+    <main class="faq-split-container"> 
+        <!-- Left Half: Image -->
+        <div class="faq-image-side">
+            <img src="images/offers.jpg" alt="Gamer wearing headset in front of monitor">
         </div>
 
-        <div class="faq-container">
-            <div class="faq-image">
-                <img src="images/faq.png" alt="Next Level gaming setup with lighting">
-            </div>
+        <!-- Right Half: Title & Accordion -->
+        <div class="faq-content-side">
+            <h1 class="faq-heading">GOT QUESTIONS?</h1>
+            <div class="faq-accordion">
+                
+                <!-- Question 1 -->
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>What are your operating hours and location?</span>
+                        <span class="faq-icon">✕</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We are open Monday through Saturday from 09:00 AM to 18:00 PM and Closed on Sundays. Please check our official website for local address details.</p>
+                    </div>
+                </div>
 
-            <div class="faq-list">
-                <details>
-                    <summary>What are your operating hours?</summary>
-                    <p>We are open Monday through Thursday from 10:00 AM to 10:00 PM, and Friday through Sunday from 10:00 AM until midnight.</p>
-                </details>
+                <!-- Question 2 -->
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Can I bring my own peripherals or accounts?</span>
+                        <span class="faq-icon">✕</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! players are welcome to bring their own headsets, mice, mechanical keyboards, or controllers. You can also log directly into your personal game accounts like Steam, Riot, Epic Games, or Battle.net.</p>
+                    </div>
+                </div>
 
-                <details>
-                    <summary>Do I need to make a reservation in advance?</summary>
-                    <p>While walk-ins are welcome based on availability, we strongly recommend booking online in advance—especially for VR stations, Esports coaching, and Escape Rooms.</p>
-                </details>
+                <!-- Question 3 -->
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Age Requirements?</span>
+                        <span class="faq-icon">✕</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Players of all ages are welcome during daytime hours. Guests under 13 must be accompanied by an adult, and players under 16 require parental consent for later sessions.</p>
+                    </div>
+                </div>
 
-                <details>
-                    <summary>How do the multi-pass discounts work?</summary>
-                    <p>When you book 2 packages/experiences in one transaction, you automatically receive 5% off. Book 3 for a 10% discount, or 4+ for a 15% discount on your subtotal!</p>
-                </details>
+                <!-- Question 4 -->
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Food, Drinks &amp; Equipment Care?</span>
+                        <span class="faq-icon">✕</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Snacks and sealed drinks from our arena café are allowed at stations using the provided cup holders. Please keep open liquids away from keyboards and PCs, and handle all peripherals and VR gear with care. Intentional damage to gear carries full financial liability. We maintain a zero-tolerance policy for hardware abuse and unsportsmanlike behavior.</p>
+                    </div>
+                </div>
 
-                <details>
-                    <summary>Can I bring my own gear (peripherals/controller)?</summary>
-                    <p>Yes! You are welcome to bring your own mouse, keyboard, headset, or controller. All machines have accessible plug-and-play USB ports.</p>
-                </details>
-
-                <details>
-                    <summary>Is there an age limit for the arena or Escape Rooms?</summary>
-                    <p>Gamers of all ages are welcome! However, players under the age of 12 must be accompanied by an adult or legal guardian.</p>
-                </details>
+                <!-- Question 5 -->
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Do I need to make a reservation?</span>
+                        <span class="faq-icon">✕</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Walk-ins are always welcome based on station availability, but we strongly recommend booking online in advance—especially on weekends, for VR sessions, or for group Escape Room challenges.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-brand-social">
-                <a href="home.html"><img src="images/logo.png" alt="Next Level Logo" class="footer-logo"></a>
-                <div class="footer-social">
-                    <p>CONNECT. PLAY</p>
-                    <ul>
-                        <li><a href="#discord">DISCORD</a></li>
-                        <li><a href="#instagram">INSTAGRAM</a></li>
-                        <li><a href="#twitter">TWITTER</a></li>
-                        <li><a href="#tiktok">TIKTOK</a></li>
-                    </ul>
-                </div>
-            </div>
-            <nav class="footer-nav">
-                <ul>
-                    <li><a href="about.html">ABOUT US</a></li>
-                    <li><a href="offers.html">OFFERS</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                </ul>
-            </nav>
-        </div>
-        <p>&copy;2023 NEXT LEVEL GAMING ARENA. ALL RIGHTS RESERVED.</p>
-    </footer>
+<!-- Footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Next Level Logo" />
+        <span class="divider"></span>
+        <span class="tagline">CONNECT. PLAY.</span>
+      </div>
 
-    <script src="js/script.js"></script>
+      <div class="footer-socials">
+        <a href="https://discord.com/" target="_blank" rel="noopener noreferrer" aria-label="Discord">
+          <img src="images/discord.png" alt="Discord" />
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <img src="images/instagram.png" alt="Instagram" />
+        </a>
+        <a href="https://x.com/?lang=en" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+          <img src="images/twitter.png" alt="Twitter" />
+        </a>
+        <a href="https://www.tiktok.com/login" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+          <img src="images/tiktok.png" alt="TikTok" />
+        </a>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT US</a>
+        <a href="offers.html">OFFERS</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">CONTACT</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>©2023 NEXT LEVEL GAMING ARENA. ALL RIGHTS RESERVED.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  
 </body>
 </html>

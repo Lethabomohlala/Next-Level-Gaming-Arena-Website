@@ -1,98 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Next Level Gaming Arena</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Next Level Gaming | Home </title>
+
+<!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
-    <header>
-        <a href="home.html"><img src="images/logo.png" alt="Next Level Logo"></a>
-        <nav>
-            <ul>
-                <li><a href="home.html" class="active">HOME</a></li>
-                <li><a href="about.html">ABOUT US</a></li>
-                <li><a href="offers.html">OFFERS</a></li>
-                <li><a href="booking.html">BOOKING</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section class="hero-section">
-            <div class="hero-content">
-                <p class="welcome-tag">WELCOME TO NEXT LEVEL</p>
-                <h1>OUTPLAY YOUR PAST</h1>
-                <p>Experience premium gaming, Esports, and unforgettable events all in one place. Explore our packages, choose your experience, and take your game to the <strong>Next Level</strong></p>
-                <a href="offers.html" class="btn-primary">ENTER THE ARENA</a>
-            </div>
-        </section>
+<!-- Navigation Header -->
+  <header class="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo.png" alt="Next Level Logo" />
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html" class="active">HOME</a>
+      <a href="about.html">ABOUT US</a>
+      <a href="offers.html">OFFERS</a>
+      <a href="booking.html">BOOKING</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
 
-        <section class="leaderboard-section">
-            <h2>TOP OF THE LEADERBOARD</h2>
-            <p>Explore our top-rated gaming passes, coaching sessions, and escape rooms. Pick one or mix and match to build your day.</p>
+<!-- Hero Section -->
+  <section id="home" class="hero">
+    <img src="images/hero.png" alt="Gamers playing in the arena" class="hero-bg" />
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>OUTPLAY <span class="gradient-text">YOUR PAST</span></h1>
+      <p>Elite Setup. Unmatched Events.<br />All In One Place.</p>
+      <a href="offers.html" class="cta-btn">ENTER THE ARENA</a>
+    </div>
+  </section>
 
-            <div class="cards-grid">
-                <div class="card">
-                    <img src="images/ultimate.png" alt="Ultimate Gamer Pass image preview">
-                    <div class="card-body">
-                        <h3>Ultimate Gamer Pass</h3>
-                        <a href="offers.html#ultimate-detail" class="card-link">View More <span class="arrow-btn">&rarr;</span></a>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="images/virtual.png" alt="Virtual Reality Experience image preview">
-                    <div class="card-body">
-                        <h3>Virtual Reality Experience</h3>
-                        <a href="offers.html#virtual-detail" class="card-link">View More <span class="arrow-btn">&rarr;</span></a>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="images/esports.png" alt="Esports Training Package image preview">
-                    <div class="card-body">
-                        <h3>Esports Training Package</h3>
-                        <a href="offers.html#esports-detail" class="card-link">View More <span class="arrow-btn">&rarr;</span></a>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="images/escape.png" alt="Escape Room Challenge image preview">
-                    <div class="card-body">
-                        <h3>Escape Room Challenge</h3>
-                        <a href="offers.html#escape-detail" class="card-link">View More <span class="arrow-btn">&rarr;</span></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+<!-- Marquee Strip Animation -->
+  <div class="marquee-container">
+    <div class="marquee-track" id="marqueeTrack">
+      <div class="marquee-content">
+        <span>TOP OF THE LEADERBOARD</span>
+        <span class="star">✶</span>
+        <span>TOP OF THE LEADERBOARD</span>
+        <span class="star">✶</span>
+        <span>TOP OF THE LEADERBOARD</span>
+        <span class="star">✶</span>
+        <span>TOP OF THE LEADERBOARD</span>
+        <span class="star">✶</span>
+      </div>
+      <div class="marquee-content" aria-hidden="true">
+        <span>TOP OF THE LEADERBOARD</span>
+        <span class="star">✶</span>
+        <span>TOP OF THE LEADERBOARD</span>
+        <span class="star">✶</span>
+        <span>TOP OF THE LEADERBOARD</span>
+        <span class="star">✶</span>
+        <span>TOP OF THE LEADERBOARD</span>
+        <span class="star">✶</span>
+      </div>
+    </div>
+  </div>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-brand-social">
-                <a href="home.html"><img src="images/logo.png" alt="Next Level Logo" class="footer-logo"></a>
-                <div class="footer-social">
-                    <p>CONNECT. PLAY</p>
-                    <ul>
-                        <li><a href="#discord">DISCORD</a></li>
-                        <li><a href="#instagram">INSTAGRAM</a></li>
-                        <li><a href="#twitter">TWITTER</a></li>
-                        <li><a href="#tiktok">TIKTOK</a></li>
-                    </ul>
-                </div>
-            </div>
-            <nav class="footer-nav">
-                <ul>
-                    <li><a href="about.html">ABOUT US</a></li>
-                    <li><a href="offers.html">OFFERS</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                </ul>
-            </nav>
+<!-- Offers Section -->
+  <section id="offers" class="offers-section">
+    <p class="offers-subtitle">
+      Explore our top-rated gaming passes, coaching sessions, and<br />
+      escape rooms. Pick one or mix and match to build your day.
+    </p>
+
+    <div class="cards-grid">
+      <!-- Card 1 -->
+      <a href="ultimate.html" class="offer-card">
+        <div class="card-image">
+          <img src="images/ultimate.jpg" alt="Ultimate Gamer Pass" />
         </div>
-        <p>&copy;2023 NEXT LEVEL GAMING ARENA. ALL RIGHTS RESERVED.</p>
-    </footer>
-    <script src="Js/script.js"></script>
+        <div class="card-body">
+          <h3>Ultimate Gamer Pass</h3>
+          <div class="card-footer">
+            <span>View More</span>
+            <div class="arrow-circle">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Card 2 -->
+      <a href="esports.html" class="offer-card">
+        <div class="card-image">
+          <img src="images/esports.jpg" alt="Esports Training" />
+        </div>
+        <div class="card-body">
+          <h3>Esports Training</h3>
+          <div class="card-footer">
+            <span>View More</span>
+            <div class="arrow-circle">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Card 3 -->
+      <a href="virtual.html" class="offer-card">
+        <div class="card-image">
+          <img src="images/virtual.png" alt="Virtual Reality" />
+        </div>
+        <div class="card-body">
+          <h3>Virtual Reality</h3>
+          <div class="card-footer">
+            <span>View More</span>
+            <div class="arrow-circle">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Card 4 -->
+      <a href="escape.html" class="offer-card">
+        <div class="card-image">
+          <img src="images/escape.jpg" alt="Escape Room Challenge" />
+        </div>
+        <div class="card-body">
+          <h3>Escape Room Challenge</h3>
+          <div class="card-footer">
+            <span>View More</span>
+            <div class="arrow-circle">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+<!-- Footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Next Level Logo" />
+        <span class="divider"></span>
+        <span class="tagline">CONNECT. PLAY.</span>
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://discord.com/" target="_blank" rel="noopener noreferrer" aria-label="Discord">
+          <img src="images/discord.png" alt="Discord" />
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <img src="images/instagram.png" alt="Instagram" />
+        </a>
+        <a href="https://x.com/?lang=en" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+          <img src="images/twitter.png" alt="Twitter" />
+        </a>
+        <a href="https://www.tiktok.com/login" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+          <img src="images/tiktok.png" alt="TikTok" />
+        </a>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT US</a>
+        <a href="offers.html">OFFERS</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">CONTACT</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>©2023 NEXT LEVEL GAMING ARENA. ALL RIGHTS RESERVED.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  
 </body>
 </html>

@@ -1,123 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Offers & Experiences | Next Level Gaming Arena</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Next Level Gaming | Offers</title>
+
+<!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
-    <header>
-        <a href="home.html"><img src="images/logo.png" alt="Next Level Logo"></a>
-        <nav>
-            <ul>
-                <li><a href="home.html">HOME</a></li>
-                <li><a href="about.html">ABOUT US</a></li>
-                <li><a href="offers.html" class="active">OFFERS</a></li>
-                <li><a href="booking.html">BOOKING</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main class="offers-main">
-        <div class="offers-header">
-            <h1>OUR PACKAGES &amp; EXPERIENCES</h1>
-            <p>Select your experience and unlock special multi-pass discounts when you book together.</p>
+<!-- Navigation Header -->
+  <header class="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo.png" alt="Next Level Logo" />
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT US</a>
+      <a href="offers.html" class="active">OFFERS</a>
+      <a href="booking.html">BOOKING</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+<!-- Offers Page Section -->
+  <main class="offers-page-section">
+    <div class="offers-page-header">
+      <h1>PACKAGES &amp; EXPERIENCES</h1>
+      <p>Select your experience and unlock special multi-pass discounts when you book together.</p>
+    </div>
+
+    <!-- Filter Pills -->
+    <div class="filter-pills">
+      <button class="filter-pill active" data-filter="all">ALL OFFERS</button>
+      <button class="filter-pill" data-filter="packages">PACKAGES</button>
+      <button class="filter-pill" data-filter="experiences">EXPERIENCES</button>
+    </div>
+
+    <!-- Horizontal Offer Cards -->
+    <div class="offers-list">
+      <!-- Card 1: Ultimate Gamer Pass -->
+      <a href="ultimate.html" class="offer-row-card" data-category="packages">
+        <div class="offer-row-image">
+          <img src="images/ultimate.jpg" alt="Ultimate Gamer Pass" />
         </div>
-
-        <div class="filter-buttons">
-            <button class="filter-btn active" onclick="filterOffers('all', event)">ALL OFFERS</button>
-            <button class="filter-btn" onclick="filterOffers('packages', event)">PACKAGES</button>
-            <button class="filter-btn" onclick="filterOffers('experiences', event)">EXPERIENCES</button>
+        <div class="offer-row-content">
+          <h2>ULTIMATE GAMER PASS</h2>
+          <p class="offer-price">R 1 500 <span>|</span> session</p>
+          <p class="offer-highlights">Full Access Pass • Unlimited Console Access</p>
+          <p class="offer-desc">Includes all-day access to RTX 4090 gaming PCs with high-refresh-rate monitors and the complete digital game library.</p>
         </div>
-
-        <!-- Packages Section -->
-        <div id="packages-section" class="offers-section">
-            <div class="package-detail-card" id="ultimate-detail">
-                <div class="card-img-wrapper">
-                    <img src="images/ultimate.png" alt="Ultimate Gamer Pass">
-                </div>
-                <div class="card-info">
-                    <h2>ULTIMATE GAMER PASS</h2>
-                    <p class="package-price">R 1,500.00 / session</p>
-                    <p class="package-features">Full Access Pass • High-End Rig • Unlimited Console Access</p>
-                    <p class="package-desc">Get unlimited access to our flagship gaming zone for the entire day. Enjoy high-refresh rate monitors, RTX 4090 gaming PCs, luxury gaming chairs, and full access to our digital game library.</p>
-                    <a href="booking.html" class="btn-primary">BOOK THIS PASS</a>
-                </div>
-            </div>
-
-            <div class="package-detail-card" id="esports-detail">
-                <div class="card-img-wrapper">
-                    <img src="images/esports.png" alt="Esports Training Package">
-                </div>
-                <div class="card-info">
-                    <h2>ESPORTS TRAINING PACKAGE</h2>
-                    <p class="package-price">R 1,500.00 / session</p>
-                    <p class="package-features">1-on-1 Coaching • VOD Review • Strategy Session</p>
-                    <p class="package-desc">Designed for competitive players aiming for the top. Includes personalized gameplay analysis, mechanic refinement, strategy breakdowns, and custom practice routines led by experienced coaches.</p>
-                    <a href="booking.html" class="btn-primary">BOOK TRAINING</a>
-                </div>
-            </div>
+        <div class="offer-row-action">
+          <div class="red-arrow-circle">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
         </div>
+      </a>
 
-        <!-- Experiences Section -->
-        <div id="experiences-section" class="offers-section">
-            <div class="package-detail-card" id="virtual-detail">
-                <div class="card-img-wrapper">
-                    <img src="images/virtual.png" alt="Virtual Reality Experience">
-                </div>
-                <div class="card-info">
-                    <h2>VIRTUAL REALITY EXPERIENCE</h2>
-                    <p class="package-price">R 1,500.00 / session</p>
-                    <p class="package-features">Full Room-Scale VR • Haptic Feedback • Single &amp; Co-Op</p>
-                    <p class="package-desc">Step directly inside your favorite games with wireless 4K headsets and immersive full-body haptic tech. Experience high-octane simulators, horror survival, or multiplayer arena shooter challenges.</p>
-                    <a href="booking.html" class="btn-primary">BOOK VR EXPERIENCE</a>
-                </div>
-            </div>
-
-            <div class="package-detail-card" id="escape-detail">
-                <div class="card-img-wrapper">
-                    <img src="images/escape.png" alt="Escape Room Challenge">
-                </div>
-                <div class="card-info">
-                    <h2>ESCAPE ROOM CHALLENGE</h2>
-                    <p class="package-price">R 750.00 / session</p>
-                    <p class="package-features">60 Minutes • Up to 6 Players • Interactive Puzzles</p>
-                    <p class="package-desc">Put your critical thinking and teamwork skills to the test! Race against the clock to solve complex cyber-themed puzzles, crack security codes, and escape before time runs out.</p>
-                    <a href="booking.html" class="btn-primary">BOOK ESCAPE ROOM</a>
-                </div>
-            </div>
+      <!-- Card 2: Esports Training -->
+      <a href="esports.html" class="offer-row-card" data-category="packages">
+        <div class="offer-row-image">
+          <img src="images/esports.jpg" alt="Esports Training" />
         </div>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-brand-social">
-                <a href="home.html"><img src="images/logo.png" alt="Next Level Logo" class="footer-logo"></a>
-                <div class="footer-social">
-                    <p>CONNECT. PLAY</p>
-                    <ul>
-                        <li><a href="#discord">DISCORD</a></li>
-                        <li><a href="#instagram">INSTAGRAM</a></li>
-                        <li><a href="#twitter">TWITTER</a></li>
-                        <li><a href="#tiktok">TIKTOK</a></li>
-                    </ul>
-                </div>
-            </div>
-            <nav class="footer-nav">
-                <ul>
-                    <li><a href="about.html">ABOUT US</a></li>
-                    <li><a href="offers.html">OFFERS</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                </ul>
-            </nav>
+        <div class="offer-row-content">
+          <h2>ESPORTS TRAINING</h2>
+          <p class="offer-price">R 1 500 <span>|</span> session</p>
+          <p class="offer-highlights">1-on-1 Coaching • VOD Review • Strategy Session</p>
+          <p class="offer-desc">Tailored coaching for competitive players, featuring custom practice routines and in-depth gameplay analysis.</p>
         </div>
-        <p>&copy;2023 NEXT LEVEL GAMING ARENA. ALL RIGHTS RESERVED.</p>
-    </footer>
+        <div class="offer-row-action">
+          <div class="red-arrow-circle">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+        </div>
+      </a>
 
-    <script src="js/script.js"></script>
+      <!-- Card 3: Virtual Reality -->
+      <a href="virtual.html" class="offer-row-card" data-category="experiences">
+        <div class="offer-row-image">
+          <img src="images/virtual.png" alt="Virtual Reality" />
+        </div>
+        <div class="offer-row-content">
+          <h2>VIRTUAL REALITY</h2>
+          <p class="offer-price">R 750 <span>|</span> session</p>
+          <p class="offer-highlights">Full Room-Scale VR • Haptic Feedback</p>
+          <p class="offer-desc">Step directly into the action with 4K wireless headsets, full-body haptics and arena shooter challenges.</p>
+        </div>
+        <div class="offer-row-action">
+          <div class="red-arrow-circle">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- Card 4: Escape Room Challenge -->
+      <a href="escape.html" class="offer-row-card" data-category="experiences">
+        <div class="offer-row-image">
+          <img src="images/escape.jpg" alt="Escape Room Challenge" />
+        </div>
+        <div class="offer-row-content">
+          <h2>ESCAPE ROOM CHALLENGE</h2>
+          <p class="offer-price">R 750 <span>|</span> session</p>
+          <p class="offer-highlights">60 Minutes • Up to 6 Players • Interactive Puzzles</p>
+          <p class="offer-desc">Test your critical thinking and teamwork under pressure. Solve cyber puzzles and escape before time runs out.</p>
+        </div>
+        <div class="offer-row-action">
+          <div class="red-arrow-circle">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+        </div>
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Next Level Logo" />
+        <span class="divider"></span>
+        <span class="tagline">CONNECT. PLAY.</span>
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://discord.com/" target="_blank" rel="noopener noreferrer" aria-label="Discord">
+          <img src="images/discord.png" alt="Discord" />
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <img src="images/instagram.png" alt="Instagram" />
+        </a>
+        <a href="https://x.com/?lang=en" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+          <img src="images/twitter.png" alt="Twitter" />
+        </a>
+        <a href="https://www.tiktok.com/login" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+          <img src="images/tiktok.png" alt="TikTok" />
+        </a>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT US</a>
+        <a href="offers.html">OFFERS</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">CONTACT</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>©2023 NEXT LEVEL GAMING ARENA. ALL RIGHTS RESERVED.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+
 </body>
 </html>

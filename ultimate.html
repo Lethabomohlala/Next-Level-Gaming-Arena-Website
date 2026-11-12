@@ -1,75 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ultimate Gamer Pass | Next Level Gaming Arena</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Next Level Gaming | Ultimate</title>
+
+<!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
-    <header>
-        <a href="home.html"><img src="images/logo.png" alt="Next Level Logo"></a>
-        <nav>
-            <ul>
-                <li><a href="home.html">HOME</a></li>
-                <li><a href="about.html">ABOUT US</a></li>
-                <li><a href="offers.html" class="active">OFFERS</a></li>
-                <li><a href="booking.html">BOOKING</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main class="detail-main">
-        <div class="back-link-wrapper">
-            <a href="offers.html" class="back-btn">&larr; Back to Offers</a>
-        </div>
+<!-- Navigation Header -->
+  <header class="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo.png" alt="Next Level Logo" />
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT US</a>
+      <a href="offers.html" class="active">OFFERS</a>
+      <a href="booking.html">BOOKING</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
 
-        <div class="detail-container">
-            <div class="detail-image">
-                <img src="images/home.png" alt="Group of people playing video games on a red couch">
+<!-- Offer Main Section -->
+    <main class="offer-detail-page-wrapper">
+        <section class="offer-detail-split-container">
+        <div class="offer-detail-image-side">
+            <img src="images/ultimate.jpg" alt="Ultimate Gamer Pass"/>
+        </div>
+        <div class="offer-detail-content-side">
+            <div class="offer-detail-header">
+            <a href="offers.html" class="back-arrow-circle" aria-label="Back to Offers">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 5 5 12 12 19"></polyline>
+            </svg>
+            </a>
+            <h1>ULTIMATE GAMER PASS</h1>
             </div>
-            <div class="detail-card">
-                <h1>ULTIMATE GAMER PASS</h1>
-                <p class="package-price">R 1,500.00 / session</p>
-                <p class="package-features">PC Gaming &bull; Console Gaming &bull; High-Speed Internet &bull; Snack Voucher &bull; Tournament Entry</p>
-                <p class="package-desc">
-                    Lock in non-stop, high-octane gaming with the <strong>Ultimate Gamer Pass!</strong> Designed for true gaming enthusiasts, this pass grants you unlimited full-day access to our high-performance gaming stations, elite setups, and full arena amenities. Jump into your favourite multiplayer titles, grind competitive leaderboards, or squad up with friends for the ultimate all-day gaming session. No timers, no interruptions...just pure, uninterrupted gameplay from open to close.
-                </p>
-                <div style="margin-top: 2rem;">
-                    <a href="booking.html" class="btn-primary">BOOK THIS PASS</a>
-                </div>
+            <div class="offer-detail-body">
+            <p>
+                Lock in non-stop, high-octane gaming with the <strong>Ultimate Gamer Pass!</strong> Designed for true gaming enthusiasts, this pass grants you unlimited full-day access to our high-performance gaming stations, elite setups, and full arena amenities. Jump into your favourite multiplayer titles, grind competitive leaderboards, or squad up with friends for the ultimate all-day gaming session. No timers, no interruptions... just pure, uninterrupted gameplay from open to close.
+            </p>
+            <div class="offer-detail-includes">
+                <strong>INCLUDES</strong> &bull; PC gaming &bull; Console gaming &bull; High-speed internet &bull; Snack voucher &bull; Tournament entry
+            </div>
+            </div>
+            <div class="offer-detail-actions">
+            <div class="price-pill-badge">R 1500</div>
+            <a href="booking.html" class="offer-book-btn">BOOK NOW</a>
             </div>
         </div>
+        </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-brand-social">
-                <a href="home.html"><img src="images/logo.png" alt="Next Level Logo" class="footer-logo"></a>
-                <div class="footer-social">
-                    <p>CONNECT. PLAY</p>
-                    <ul>
-                        <li><a href="#discord">DISCORD</a></li>
-                        <li><a href="#instagram">INSTAGRAM</a></li>
-                        <li><a href="#twitter">TWITTER</a></li>
-                        <li><a href="#tiktok">TIKTOK</a></li>
-                    </ul>
-                </div>
-            </div>
-            <nav class="footer-nav">
-                <ul>
-                    <li><a href="about.html">ABOUT US</a></li>
-                    <li><a href="offers.html">OFFERS</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                </ul>
-            </nav>
-        </div>
-        <p>&copy;2023 NEXT LEVEL GAMING ARENA. ALL RIGHTS RESERVED.</p>
-    </footer>
+<!-- Footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Next Level Logo" />
+        <span class="divider"></span>
+        <span class="tagline">CONNECT. PLAY.</span>
+      </div>
 
-    <script src="js/script.js"></script>
+      <div class="footer-socials">
+        <a href="https://discord.com/" target="_blank" rel="noopener noreferrer" aria-label="Discord">
+          <img src="images/discord.png" alt="Discord" />
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <img src="images/instagram.png" alt="Instagram" />
+        </a>
+        <a href="https://x.com/?lang=en" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+          <img src="images/twitter.png" alt="Twitter" />
+        </a>
+        <a href="https://www.tiktok.com/login" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+          <img src="images/tiktok.png" alt="TikTok" />
+        </a>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT US</a>
+        <a href="offers.html">OFFERS</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">CONTACT</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>©2023 NEXT LEVEL GAMING ARENA. ALL RIGHTS RESERVED.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>

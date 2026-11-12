@@ -1,64 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Esports Training | Next Level</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header>
-        <a href="home.html">
-            <img src="images/logo.png" alt="Next Level Logo" width="200" height="200">
-        </a>
-        <nav>
-            <ul>
-                <li><a href="home.html">HOME</a></li>
-                <li><a href="about.html">ABOUT US</a></li>
-                <li><a href="offers.html">OFFERS</a></li>
-                <li><a href="booking.html">BOOKING</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-            </ul>
-        </nav>
-    </header>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Next Level Gaming | Esports Training</title>
 
-    <main>
-        <section>
-            <div>
-                <a href="offers.html">&larr;</a>
-                <img src="images/esports.png" alt="Esports coach helping a gamer at a station">
+<!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+<!-- Navigation Header -->
+  <header class="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo.png" alt="Next Level Logo" />
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT US</a>
+      <a href="offers.html" class="active">OFFERS</a>
+      <a href="booking.html">BOOKING</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+<!-- Offer Main Section -->
+    <main class="offer-detail-page-wrapper">
+        <section class="offer-detail-split-container">
+        <div class="offer-detail-image-side">
+            <img src="images/esports.jpg" alt="Esports"/>
+        </div>
+        <div class="offer-detail-content-side">
+            <div class="offer-detail-header">
+            <a href="offers.html" class="back-arrow-circle" aria-label="Back to Offers">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 5 5 12 12 19"></polyline>
+            </svg>
+            </a>
+            <h1>ESPORTS TRAINING</h1>
             </div>
-            <div>
-                <h1>ESPORTS TRAINING</h1>
-                <h1>R 1500</h1>
-                <p>Take your gameplay to the competitive stage with the <strong>Esports Training Package!</strong> Designed for aspiring pros, competitive squads, and serious players looking to break through their skill ceilings, this package combines structured practice with direct, professional coaching. Gain in-depth tactical insights, refine your mechanical execution and master map control under the guidance of experienced Esports coaches. Whether you are perfecting team coordination or fine-tuning individual micro-skills, train like a champion in a professional arena environment built for high-level performance.</p>
-                <p>INCLUDES ✦ Strategy coaching ✦ Team communication ✦ Match analysis ✦ Practice sessions ✦ Performance feedback</p>
-                <a href="booking.html">BOOK NOW!</a>
+            <div class="offer-detail-body">
+            <p>
+                Take your gameplay to the competitive stage with the <strong>Esports Training Package!</strong> Designed for aspiring pros and competitive squads looking to break through their skill ceilings, this package gives you in-depth tactical insights and helps you master map control under the guidance of experienced Esports coaches. Whether you are perfecting team coordination or fine-tuning individual micro-skills, train like a champion in a professional arena environment built for high-level performance.
+            </p>
+            <div class="offer-detail-includes">
+                <strong>INCLUDES</strong> &bull; Strategy coaching &bull; Team communication &bull; Match analysis &bull; Performance feedback
             </div>
+            </div>
+            <div class="offer-detail-actions">
+            <div class="price-pill-badge">R 1500</div>
+            <a href="booking.html" class="offer-book-btn">BOOK NOW</a>
+            </div>
+        </div>
         </section>
     </main>
 
-    <footer>
-        <div>
-            <p>CONNECT. PLAY</p>
-            <ul>
-                <li><a href="#discord">Discord</a></li>
-                <li><a href="#instagram">Instagram</a></li>
-                <li><a href="#twitter">Twitter</a></li>
-                <li><a href="#tiktok">TikTok</a></li>
-            </ul>
-        </div>
+<!-- Footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Next Level Logo" />
+        <span class="divider"></span>
+        <span class="tagline">CONNECT. PLAY.</span>
+      </div>
 
-        <nav>
-            <ul>
-                <li><a href="about.html">ABOUT US</a></li>
-                <li><a href="offers.html">OFFERS</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-            </ul>
-        </nav>
+      <div class="footer-socials">
+        <a href="https://discord.com/" target="_blank" rel="noopener noreferrer" aria-label="Discord">
+          <img src="images/discord.png" alt="Discord" />
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <img src="images/instagram.png" alt="Instagram" />
+        </a>
+        <a href="https://x.com/?lang=en" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+          <img src="images/twitter.png" alt="Twitter" />
+        </a>
+        <a href="https://www.tiktok.com/login" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+          <img src="images/tiktok.png" alt="TikTok" />
+        </a>
+      </div>
 
-        <p>&copy;2023 NEXT LEVEL GAMING ARENA. ALL RIGHTS RESERVED.</p>
-    </footer>
+      <div class="footer-links">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT US</a>
+        <a href="offers.html">OFFERS</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">CONTACT</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>©2023 NEXT LEVEL GAMING ARENA. ALL RIGHTS RESERVED.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>

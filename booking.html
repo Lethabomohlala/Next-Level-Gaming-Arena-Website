@@ -1,122 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking | Next Level Gaming Arena</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Next Level Gaming | Booking</title>
+
+<!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
-    <header>
-        <a href="home.html"><img src="images/logo.png" alt="Next Level Logo"></a>
-        <nav>
-            <ul>
-                <li><a href="home.html">HOME</a></li>
-                <li><a href="about.html">ABOUT US</a></li>
-                <li><a href="offers.html">OFFERS</a></li>
-                <li><a href="booking.html" class="active">BOOKING</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <div class="client-details-card">
-            <h1>BOOK YOUR SESSION</h1>
-            <form id="bookingForm" novalidate>
-                <div class="form-group">
-                    <label for="fullName">FULL NAME *</label>
-                    <input type="text" id="fullName" class="form-input" placeholder="e.g. John Doe">
-                    <div class="error-message" id="nameError">Please enter your full name.</div>
-                </div>
+<!-- Navigation Header -->
+  <header class="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo.png" alt="Next Level Logo" />
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT US</a>
+      <a href="offers.html">OFFERS</a>
+      <a href="booking.html" class="active">BOOKING</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
 
-                <div class="form-group">
-                    <label for="email">EMAIL ADDRESS *</label>
-                    <input type="email" id="email" class="form-input" placeholder="e.g. john@example.com">
-                    <div class="error-message" id="emailError">Please enter a valid email address.</div>
-                </div>
+<!-- Booking Main Section -->
+  <main class="booking-page-wrapper">
+    <img src="images/booking.jpg" alt="Gamers celebrating" class="booking-bg-img" />
+    <div class="booking-bg-overlay"></div>
 
-                <div class="form-group">
-                    <label for="phone">PHONE NUMBER *</label>
-                    <input type="tel" id="phone" class="form-input" placeholder="e.g. +27 82 123 4567">
-                    <div class="error-message" id="phoneError">Please enter a valid contact number.</div>
-                </div>
+    <section class="booking-container">
+      <div class="booking-header">
+        <h1>SELECT YOUR THRILL</h1>
+        <p>Select your experiences/ packages, enter your details, and lock in your session.</p>
+      </div>
 
-                <div class="form-group">
-                    <label>SELECT PACKAGES &amp; EXPERIENCES *</label>
-                    <div class="pkg-selection-box">
-                        <label class="pkg-item">
-                            <div class="pkg-item-left">
-                                <input type="checkbox" name="pkg" value="ULTIMATE GAMER PASS" data-price="1500" checked>
-                                <span>ULTIMATE GAMER PASS</span>
-                            </div>
-                            <span class="pkg-price">R 1,500</span>
-                        </label>
-                        <label class="pkg-item">
-                            <div class="pkg-item-left">
-                                <input type="checkbox" name="pkg" value="VIRTUAL REALITY EXPERIENCE" data-price="1500">
-                                <span>VIRTUAL REALITY EXPERIENCE</span>
-                            </div>
-                            <span class="pkg-price">R 1,500</span>
-                        </label>
-                        <label class="pkg-item">
-                            <div class="pkg-item-left">
-                                <input type="checkbox" name="pkg" value="ESPORTS TRAINING" data-price="1500" checked>
-                                <span>ESPORTS TRAINING PACKAGE</span>
-                            </div>
-                            <span class="pkg-price">R 1,500</span>
-                        </label>
-                        <label class="pkg-item">
-                            <div class="pkg-item-left">
-                                <input type="checkbox" name="pkg" value="ESCAPE ROOM CHALLENGE" data-price="750" checked>
-                                <span>ESCAPE ROOM CHALLENGE</span>
-                            </div>
-                            <span class="pkg-price">R 750</span>
-                        </label>
-                    </div>
-                </div>
+      <form id="bookingForm" class="booking-form" novalidate>
+        <!-- Available Packages -->
+        <div class="booking-group">
+          <h2 class="booking-group-title">AVAILABLE PACKAGES</h2>
 
-                <div class="guests-container">
-                    <label>NUMBER OF GUESTS</label>
-                    <div class="counter-wrapper">
-                        <button type="button" class="counter-btn" id="decrementBtn">-</button>
-                        <span class="guest-count-display" id="guestCount">1</span>
-                        <button type="button" class="counter-btn" id="incrementBtn">+</button>
-                    </div>
-                </div>
-
-                <button type="submit" class="btn-primary" style="width: 100%;">PROCEED TO SUMMARY</button>
-            </form>
-        </div>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-brand-social">
-                <a href="home.html"><img src="images/logo.png" alt="Next Level Logo" class="footer-logo"></a>
-                <div class="footer-social">
-                    <p>CONNECT. PLAY</p>
-                    <ul>
-                        <li><a href="#discord">DISCORD</a></li>
-                        <li><a href="#instagram">INSTAGRAM</a></li>
-                        <li><a href="#twitter">TWITTER</a></li>
-                        <li><a href="#tiktok">TIKTOK</a></li>
-                    </ul>
-                </div>
+          <div class="booking-item-pill" data-name="Ultimate Gamer Pass" data-price="1500">
+            <span class="item-name">ULTIMATE GAMER PASS</span>
+            <span class="item-price">R 1500</span>
+            <div class="qty-controls">
+              <button type="button" class="qty-btn minus" aria-label="Decrease quantity">−</button>
+              <span class="qty-value">0</span>
+              <button type="button" class="qty-btn plus" aria-label="Increase quantity">+</button>
             </div>
-            <nav class="footer-nav">
-                <ul>
-                    <li><a href="about.html">ABOUT US</a></li>
-                    <li><a href="offers.html">OFFERS</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                </ul>
-            </nav>
-        </div>
-        <p>&copy;2023 NEXT LEVEL GAMING ARENA. ALL RIGHTS RESERVED.</p>
-    </footer>
+          </div>
 
-    <script src="js/script.js"></script>
+          <div class="booking-item-pill" data-name="Esports Training" data-price="1500">
+            <span class="item-name">ESPORTS TRAINING</span>
+            <span class="item-price">R 1500</span>
+            <div class="qty-controls">
+              <button type="button" class="qty-btn minus" aria-label="Decrease quantity">−</button>
+              <span class="qty-value">0</span>
+              <button type="button" class="qty-btn plus" aria-label="Increase quantity">+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Available Experiences -->
+        <div class="booking-group">
+          <h2 class="booking-group-title">AVAILABLE EXPERIENCES</h2>
+
+          <div class="booking-item-pill" data-name="Virtual Reality" data-price="750">
+            <span class="item-name">VIRTUAL REALITY</span>
+            <span class="item-price">R 750</span>
+            <div class="qty-controls">
+              <button type="button" class="qty-btn minus" aria-label="Decrease quantity">−</button>
+              <span class="qty-value">0</span>
+              <button type="button" class="qty-btn plus" aria-label="Increase quantity">+</button>
+            </div>
+          </div>
+
+          <div class="booking-item-pill" data-name="Escape Room" data-price="750">
+            <span class="item-name">ESCAPE ROOM</span>
+            <span class="item-price">R 750</span>
+            <div class="qty-controls">
+              <button type="button" class="qty-btn minus" aria-label="Decrease quantity">−</button>
+              <span class="qty-value">0</span>
+              <button type="button" class="qty-btn plus" aria-label="Increase quantity">+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Client Details -->
+        <div class="booking-group client-details-group">
+          <h2 class="booking-group-title">CLIENT DETAILS</h2>
+
+          <div class="form-field">
+            <label for="clientName">Name &amp; Surname *</label>
+            <input type="text" id="clientName" name="clientName" placeholder="John Doe" required />
+            <small class="error-msg" id="nameError"></small>
+          </div>
+
+          <div class="form-field">
+            <label for="clientEmail">Email Address *</label>
+            <input type="email" id="clientEmail" name="clientEmail" placeholder="Johndoe@example.com" required />
+            <small class="error-msg" id="emailError"></small>
+          </div>
+
+          <div class="form-field">
+            <label for="clientPhone">Phone Number (10 digits) *</label>
+            <input type="tel" id="clientPhone" name="clientPhone" placeholder="0819924545" maxlength="10" required />
+            <small class="error-msg" id="phoneError"></small>
+          </div>
+
+          <div class="form-field">
+            <label for="bookingDate">Date ( DD MMM YYYY) *</label>
+            <input type="date" id="bookingDate" name="bookingDate" required />
+            <small class="error-msg" id="dateError"></small>
+          </div>
+
+          <div class="form-field">
+            <label for="stationPass">Station Pass *</label>
+            <div class="select-wrapper">
+              <select id="stationPass" name="stationPass" required>
+                <option value="" disabled selected>Select Session Length</option>
+                <option value="1 hour pass">1 hour pass</option>
+                <option value="2 hour pass (popular)">2 hour pass (popular)</option>
+              </select>
+            </div>
+            <small class="error-msg" id="stationError"></small>
+          </div>
+
+          <p class="booking-disclaimer">
+            <strong>Disclaimer</strong> | Bookings are pending final admin confirmation. A mandatory 15-minute sanitization buffer applies after play ends.
+          </p>
+
+          <!-- Number of Guests -->
+          <div class="guests-control-section">
+            <label class="guests-label">Number Of Guests *</label>
+            <div class="guests-counter" id="guestsCounter">
+              <button type="button" class="qty-btn minus" id="guestMinus" aria-label="Decrease guests">−</button>
+              <span class="qty-value" id="guestCount">1</span>
+              <button type="button" class="qty-btn plus" id="guestPlus" aria-label="Increase guests">+</button>
+            </div>
+          </div>
+
+          <div class="booking-submit-wrap">
+            <div id="formGlobalError" class="global-error-msg"></div>
+            <button type="submit" class="cta-btn booking-submit-btn">CALCULATE FEES</button>
+          </div>
+        </div>
+      </form>
+    </section>
+  </main>
+
+<!-- Footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Next Level Logo" />
+        <span class="divider"></span>
+        <span class="tagline">CONNECT. PLAY.</span>
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://discord.com/" target="_blank" rel="noopener noreferrer" aria-label="Discord">
+          <img src="images/discord.png" alt="Discord" />
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <img src="images/instagram.png" alt="Instagram" />
+        </a>
+        <a href="https://x.com/?lang=en" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+          <img src="images/twitter.png" alt="Twitter" />
+        </a>
+        <a href="https://www.tiktok.com/login" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+          <img src="images/tiktok.png" alt="TikTok" />
+        </a>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT US</a>
+        <a href="offers.html">OFFERS</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">CONTACT</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>©2023 NEXT LEVEL GAMING ARENA. ALL RIGHTS RESERVED.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>

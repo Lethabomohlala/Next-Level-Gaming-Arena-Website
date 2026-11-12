@@ -1,99 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Next Level Gaming Arena</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Next Level Gaming | About Us</title>
+
+<!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
-    <header>
-        <a href="home.html"><img src="images/logo.png" alt="Next Level Logo"></a>
-        <nav>
-            <ul>
-                <li><a href="home.html">HOME</a></li>
-                <li><a href="about.html" class="active">ABOUT US</a></li>
-                <li><a href="offers.html">OFFERS</a></li>
-                <li><a href="booking.html">BOOKING</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main class="about-main">
-        <!-- Top Split Section: Story & Arena Image -->
-        <section class="about-hero-grid">
-            <div class="about-story-col">
-                <h1 class="about-title">ABOUT US</h1>
-                <div class="about-text">
-                    <p>
-                        Founded in 2023 in the heart of Johannesburg, <strong>Next Level Gaming & Esports Arena</strong> was built by Jason Naidoo, an avid gamer who saw a major gap in the local gaming scene. While South Africa's passion for Esports and gaming was rapidly growing, access to high-performance equipment, specialized arena setups, and organized competitive events remained limited. Driven to solve this, Jason set out to build a modern venue that bridges the gap, offering a space where players of all skill levels can access top-tier gear, join competitive tournaments, and share their passion with a vibrant community.
-                    </p>
-                </div>
+<!-- Navigation Header -->
+  <header class="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo.png" alt="Next Level Logo" />
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">HOME</a>
+      <a href="about.html" class="active">ABOUT US</a>
+      <a href="offers.html">OFFERS</a>
+      <a href="booking.html">BOOKING</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
 
-                <!-- Circular Badge -->
-                <div class="circular-badge">
-                    <svg viewBox="0 0 100 100" width="130" height="130">
-                        <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none" />
-                        <text fill="#ffffff" font-size="10" font-weight="500" letter-spacing="1.5">
-                            <textPath href="#circlePath" startOffset="0%">
-                                BUILT BY GAMERS &#9733; MADE FOR EVERYONE &#9733;
-                            </textPath>
-                        </text>
-                    </svg>
-                </div>
-            </div>
+<!-- About Us Section -->
+  <section class="about-section">
+    <div class="about-container">
+      <div class="about-text-content">
+        <h2>ABOUT US</h2>
+        <p>
+          Founded in 2023 in the heart of Johannesburg, <strong>Next Level Gaming & Esports Arena</strong> was built by Jason Naidoo, an avid gamer who saw a major gap in the local gaming scene. While South Africa's passion for Esports and gaming was rapidly growing, access to high-performance equipment, specialized arena setups, and organized competitive events remained limited.
+        </p>
+        <p>
+          Driven to solve this, Jason set out to build a modern venue that bridges the gap, offering a space where players of all skill levels can access top-tier gear, join competitive tournaments, and share their passion with a vibrant community.
+        </p>
+      </div>
 
-            <div class="about-image-col">
-                <img src="images/about.png" alt="Next Level Gaming Arena Exterior">
-            </div>
-        </section>
+      <div class="about-badge-wrapper">
+        <img src="images/spin.png" alt="Built by Gamers Made for Everyone" class="spin-badge" />
+      </div>
+    </div>
 
-        <!-- Bottom Grid: Mission & Vision Cards -->
-        <section class="mission-vision-grid">
-            <div class="info-card">
-                <h2>OUR MISSION</h2>
-                <p>
-                    We are dedicated to driving the expansion of South Africa's Esports and gaming ecosystem. By combining modern hardware, inclusive community spaces, and competitive events, Next Level provides an accessible platform where casual players can socialise and aspiring pro-gamers can hone their skills.
-                </p>
-            </div>
+<!-- Arena Interior Image -->
+    <div class="about-image-container">
+      <img src="images/about.png" alt="Next Level Gaming Arena Interior" />
+    </div>
 
-            <div class="info-card">
-                <h2>OUR VISION</h2>
-                <p>
-                    To be Africa's premier gaming and Esports destination, cultivating an inclusive community where every player, from casual gamer to rising pro, can unlock their ultimate potential. Empowering every gamer to play, connect, and compete at the next level in a vibrant, inclusive community.
-                </p>
-            </div>
-        </section>
-    </main>
+<!-- Mission & Vision Section -->
+    <div class="mission-vision-grid">
+      <div class="mission-box">
+        <h3>OUR MISSION</h3>
+        <p>
+          We are dedicated to driving the expansion of South Africa's Esports and gaming ecosystem. By combining modern hardware, inclusive community spaces, and competitive events, Next Level provides an accessible platform where casual players can socialise and hone their skills.
+        </p>
+      </div>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-brand-social">
-                <a href="home.html"><img src="images/logo.png" alt="Next Level Logo" class="footer-logo"></a>
-                <div class="footer-social">
-                    <p>CONNECT. PLAY</p>
-                    <ul>
-                        <li><a href="#discord">DISCORD</a></li>
-                        <li><a href="#instagram">INSTAGRAM</a></li>
-                        <li><a href="#twitter">TWITTER</a></li>
-                        <li><a href="#tiktok">TIKTOK</a></li>
-                    </ul>
-                </div>
-            </div>
-            <nav class="footer-nav">
-                <ul>
-                    <li><a href="about.html">ABOUT US</a></li>
-                    <li><a href="offers.html">OFFERS</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                </ul>
-            </nav>
-        </div>
-        <p>&copy;2023 NEXT LEVEL GAMING ARENA. ALL RIGHTS RESERVED.</p>
-    </footer>
+      <div class="vision-box">
+        <h3>OUR VISION</h3>
+        <p>
+          To be Africa's premier gaming and Esports destination, cultivating an inclusive community where every player, from casual gamer to rising pro, can unlock their ultimate potential. Empowering every gamer to play, connect, and compete at the next level in a vibrant, inclusive community.
+        </p>
+      </div>
+    </div>
+  </section>
 
-    <script src="js/script.js"></script>
+<!-- Footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Next Level Logo" />
+        <span class="divider"></span>
+        <span class="tagline">CONNECT. PLAY.</span>
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://discord.com/" target="_blank" rel="noopener noreferrer" aria-label="Discord">
+          <img src="images/discord.png" alt="Discord" />
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <img src="images/instagram.png" alt="Instagram" />
+        </a>
+        <a href="https://x.com/?lang=en" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+          <img src="images/twitter.png" alt="Twitter" />
+        </a>
+        <a href="https://www.tiktok.com/login" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+          <img src="images/tiktok.png" alt="TikTok" />
+        </a>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT US</a>
+        <a href="offers.html">OFFERS</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">CONTACT</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy;2023 NEXT LEVEL GAMING ARENA. ALL RIGHTS RESERVED.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>

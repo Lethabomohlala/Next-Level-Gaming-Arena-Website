@@ -1,0 +1,20 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Dependencies (if using npm/Node.js)
+node_modules/
+
+# Environment & sensitive keys
+.env
+.env.local
+
+# Code editor folders
+.vscode/
+.idea/
+
+# Logs & temporary files
+*.log
+npm-debug.log*

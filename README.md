@@ -2,9 +2,9 @@
 
 # NEXT LEVEL GAMING ARENA WEBSITE
 
-[✦ YOUTUBE VIDEO LINK ✦]()
+[✦ YOUTUBE VIDEO LINK ✦](https://youtu.be/DlEvOrQe9y8)
 
-REMEMBER TO INCREASE THE VIDEO QUALITY ON YOUTUBE TO 1080DP
+**TIMESTAMP: 06:37 Website Walkthrough** | REMEMBER TO INCREASE THE VIDEO QUALITY ON YOUTUBE TO 1080DP. 
 
 **Note:** This repository represents the completed, desktop-optimized UI design and front-end implementation of the Next Level Gaming & Esports Arena web platform. Building upon the initial structural wireframes, the site features a responsive dark-mode gaming aesthetic, multi-column desktop layouts, interactive filtering, and a complete reservation and cost-breakdown workflow.
 
